@@ -1,26 +1,77 @@
 @import "tailwindcss";
 
 :root {
+  --brand-navy: #1b222e;
+  --brand-navy-50: #f4f5f6;
+  --brand-navy-100: #e4e6e9;
+  --brand-navy-600: #454e5f;
+  --brand-navy-700: #2d3543;
+  --brand-red: #ec1c23;
+  --brand-red-600: #c9151b;
+  --brand-red-700: #a51116;
+
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-full: 999px;
+
+  --shadow-card: 0 1px 2px rgba(27, 34, 46, 0.04), 0 8px 24px -12px rgba(27, 34, 46, 0.16);
+  --shadow-card-hover: 0 4px 8px rgba(27, 34, 46, 0.06), 0 16px 32px -12px rgba(27, 34, 46, 0.22);
+
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #1b222e;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --color-navy: var(--brand-navy);
+  --color-navy-50: var(--brand-navy-50);
+  --color-navy-100: var(--brand-navy-100);
+  --color-navy-600: var(--brand-navy-600);
+  --color-navy-700: var(--brand-navy-700);
+  --color-red: var(--brand-red);
+  --color-red-600: var(--brand-red-600);
+  --color-red-700: var(--brand-red-700);
+
+  --font-sans: var(--font-manrope);
+  --font-mono: var(--font-mono-num);
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: -100px;
+  z-index: 100;
+  background: var(--brand-navy);
+  color: white;
+  padding: 0.75rem 1.25rem;
+  border-radius: var(--radius-sm);
+  transition: top 0.15s ease;
+}
+
+.skip-link:focus {
+  top: 1rem;
+}
+
+::selection {
+  background: var(--brand-red);
+  color: white;
 }

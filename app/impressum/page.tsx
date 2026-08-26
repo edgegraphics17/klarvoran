@@ -1,0 +1,80 @@
+import type { Metadata } from "next";
+import { Section, Eyebrow } from "@/components/Section";
+import { Breadcrumbs } from "@/components/Breadcrumbs";
+import { siteConfig } from "@/lib/site-config";
+
+export const metadata: Metadata = {
+  title: "Impressum",
+  description: "Impressum von MS Coaching gemäß § 5 TMG.",
+  alternates: { canonical: "/impressum" },
+  robots: { index: true, follow: true },
+};
+
+export default function ImpressumPage() {
+  return (
+    <>
+      <Breadcrumbs items={[{ href: "/impressum", label: "Impressum" }]} />
+      <Section tone="white" className="pt-12">
+        <Eyebrow>Impressum</Eyebrow>
+        <h1 className="mt-4 text-3xl font-bold text-navy sm:text-4xl">Impressum</h1>
+
+        <div className="mt-10 max-w-2xl space-y-8 text-navy-600">
+          <div>
+            <h2 className="text-sm font-semibold uppercase tracking-wide text-navy-600">
+              Angaben gemäß § 5 TMG
+            </h2>
+            <p className="mt-2 text-navy">
+              {siteConfig.legalName}
+              <br />
+              {siteConfig.address.street}
+              <br />
+              {siteConfig.address.zip} {siteConfig.address.city}
+            </p>
+          </div>
+
+          <div>
+            <h2 className="text-sm font-semibold uppercase tracking-wide text-navy-600">Kontakt</h2>
+            <p className="mt-2">
+              Telefon: {siteConfig.contact.phoneDisplay}
+              <br />
+              E-Mail: {siteConfig.contact.email}
+            </p>
+          </div>
+
+          <div>
+            <h2 className="text-sm font-semibold uppercase tracking-wide text-navy-600">Umsatzsteuer</h2>
+            <p className="mt-2">
+              Kleinunternehmer im Sinne von § 19 UStG. Es wird keine Umsatzsteuer ausgewiesen.
+            </p>
+          </div>
+
+          <div>
+            <h2 className="text-sm font-semibold uppercase tracking-wide text-navy-600">
+              Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV
+            </h2>
+            <p className="mt-2">{siteConfig.founder}, Anschrift wie oben.</p>
+          </div>
+
+          <div>
+            <h2 className="text-sm font-semibold uppercase tracking-wide text-navy-600">
+              Zulassung nach § 178 SGB III
+            </h2>
+            <p className="mt-2">
+              {siteConfig.legalName} ist als Träger nach § 178 SGB III zugelassen, zertifiziert durch{" "}
+              {siteConfig.certificate.issuerFull}. Zertifikat-Nr. {siteConfig.certificate.number}, gültig{" "}
+              {siteConfig.certificate.validFrom} bis {siteConfig.certificate.validTo}.
+            </p>
+          </div>
+
+          <div className="rounded-[var(--radius-md)] border border-navy-100 bg-navy-50 p-5 text-sm">
+            <p>
+              <strong className="font-semibold text-navy">Hinweis:</strong> Diese Website erhebt für dieses
+              Impressum keinen Anspruch auf vollständige juristische Beratung. Bitte lasse Name, Anschrift und
+              Kontaktangaben vor Veröffentlichung final durch dich bzw. eine rechtliche Beratung bestätigen.
+            </p>
+          </div>
+        </div>
+      </Section>
+    </>
+  );
+}
