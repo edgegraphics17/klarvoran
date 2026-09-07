@@ -10,7 +10,7 @@ import { siteConfig } from "@/lib/site-config";
 export const metadata: Metadata = {
   title: "Für Fachkräfte & Kooperationspartner",
   description:
-    "Trägerstatus, Zulassung und Maßnahmedaten von MS Coaching für Vermittlungsfachkräfte bei Jobcenter/Agentur für Arbeit sowie Kooperationspartner.",
+    "Trägerstatus, Zulassung und Maßnahmedaten von klarvoran (MS Coaching – Mazhar Said) für Vermittlungsfachkräfte bei Jobcenter/Agentur für Arbeit sowie Kooperationspartner.",
   alternates: { canonical: "/fachkraefte-kooperationspartner" },
 };
 
@@ -24,9 +24,10 @@ export default function FachkraeftePage() {
           AZAV-zugelassener Träger für Ihre Zuweisung
         </h1>
         <p className="mt-6 max-w-2xl text-lg leading-relaxed text-navy-600">
-          MS Coaching ist eigenständig nach § 178 SGB III als Träger zugelassen – mit eigener zugelassener
-          Maßnahme, nicht als Honorarcoach im Coachpool eines fremden Trägers. Diese Seite gibt Ihnen als
-          Vermittlungsfachkraft oder Kooperationspartner einen schnellen, belastbaren Überblick.
+          klarvoran ist die Marke, unter der MS Coaching – Mazhar Said auftritt: eigenständig nach § 178 SGB III
+          als Träger zugelassen – mit eigener zugelassener Maßnahme, nicht als Honorarcoach im Coachpool eines
+          fremden Trägers. Diese Seite gibt Ihnen als Vermittlungsfachkraft oder Kooperationspartner einen
+          schnellen, belastbaren Überblick.
         </p>
       </Section>
 
@@ -103,7 +104,8 @@ export default function FachkraeftePage() {
           <Card>
             <h3 className="font-semibold text-navy">Meldekanal</h3>
             <p className="mt-2 text-sm leading-relaxed text-navy-600">
-              MS Coaching ist unter der Kennung „{siteConfig.kursnet.id}“ auf KURSNET / arbeitsagentur.de gelistet.
+              {siteConfig.legalName} ist unter der Kennung „{siteConfig.kursnet.id}“ auf KURSNET / arbeitsagentur.de
+              gelistet.
               Für Zuweisungen erreichen Sie uns direkt über das Kontaktformular unten oder telefonisch.
             </p>
           </Card>

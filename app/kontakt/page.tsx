@@ -7,7 +7,7 @@ import { siteConfig } from "@/lib/site-config";
 
 export const metadata: Metadata = {
   title: "Kontakt",
-  description: "Kontaktiere MS Coaching per Telefon, E-Mail, WhatsApp oder Formular – wir melden uns zeitnah zurück.",
+  description: "Kontaktiere klarvoran per Telefon, E-Mail, WhatsApp oder Formular – wir melden uns zeitnah zurück.",
   alternates: { canonical: "/kontakt" },
 };
 

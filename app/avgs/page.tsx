@@ -31,7 +31,7 @@ const guideSteps = [
   },
   {
     title: "4. Gutschein bei uns einreichen",
-    text: "Bring deinen Gutschein zu MS Coaching – wir prüfen ihn unverbindlich im kostenlosen Erstgespräch.",
+    text: "Bring deinen Gutschein zu klarvoran – wir prüfen ihn unverbindlich im kostenlosen Erstgespräch.",
   },
 ];
 
@@ -57,8 +57,8 @@ export default function AvgsPage() {
             <h2 className="text-lg font-bold text-navy">Was ist die AZAV?</h2>
             <p className="mt-2 text-sm leading-relaxed text-navy-600">
               Die AZAV (Akkreditierungs- und Zulassungsverordnung Arbeitsförderung) legt fest, welche Anforderungen
-              ein Bildungsträger erfüllen muss, um Maßnahmen der Arbeitsförderung durchführen zu dürfen. MS Coaching
-              ist als Träger zugelassen und durch CERTQUA zertifiziert.
+              ein Bildungsträger erfüllen muss, um Maßnahmen der Arbeitsförderung durchführen zu dürfen. klarvoran
+              (MS Coaching – Mazhar Said) ist als Träger zugelassen und durch CERTQUA zertifiziert.
             </p>
           </Card>
           <Card>

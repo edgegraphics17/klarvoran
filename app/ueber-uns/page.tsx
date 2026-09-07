@@ -7,7 +7,7 @@ import { CtaSection } from "@/components/CtaSection";
 export const metadata: Metadata = {
   title: "Über uns",
   description:
-    "MS Coaching: Leitbild, Qualitätsverständnis und Werte des AZAV-zugelassenen Bildungsträgers für Bewerbungscoaching in Frankfurt am Main.",
+    "klarvoran: Leitbild, Qualitätsverständnis und Werte des AZAV-zugelassenen Bildungsträgers (MS Coaching – Mazhar Said) für Bewerbungscoaching in Frankfurt am Main.",
   alternates: { canonical: "/ueber-uns" },
 };
 

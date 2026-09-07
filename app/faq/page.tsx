@@ -8,7 +8,7 @@ import { generalFaq, avgsFaq } from "@/lib/content/faq";
 
 export const metadata: Metadata = {
   title: "Häufige Fragen (FAQ)",
-  description: "Antworten auf die häufigsten Fragen zu AVGS-Coaching, Kosten, Ablauf und Zulassung von MS Coaching.",
+  description: "Antworten auf die häufigsten Fragen zu AVGS-Coaching, Kosten, Ablauf und Zulassung von klarvoran.",
   alternates: { canonical: "/faq" },
 };
 

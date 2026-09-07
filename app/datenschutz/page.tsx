@@ -5,7 +5,7 @@ import { siteConfig } from "@/lib/site-config";
 
 export const metadata: Metadata = {
   title: "Datenschutz",
-  description: "Datenschutzerklärung von MS Coaching gemäß DSGVO.",
+  description: "Datenschutzerklärung für klarvoran (MS Coaching – Mazhar Said) gemäß DSGVO.",
   alternates: { canonical: "/datenschutz" },
 };
 

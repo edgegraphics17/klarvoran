@@ -18,7 +18,7 @@ import { siteConfig } from "@/lib/site-config";
 export const metadata: Metadata = {
   title: "AVGS Coaching Frankfurt – Kostenloses Bewerbungscoaching",
   description:
-    "MS Coaching: AZAV-zugelassener Bildungsträger in Frankfurt am Main. Individuelles Bewerbungscoaching, 32 UE in bis zu 8 Wochen – kostenfrei mit AVGS.",
+    "klarvoran: individuelles Bewerbungscoaching in Frankfurt am Main von MS Coaching – Mazhar Said, AZAV-zugelassener Bildungsträger. 32 UE in bis zu 8 Wochen – kostenfrei mit AVGS.",
   alternates: { canonical: "/" },
 };
 
@@ -55,7 +55,7 @@ export default function HomePage() {
           <div className="mx-auto w-64 sm:w-80 lg:w-full">
             <Image
               src={siteConfig.images.badge}
-              alt="Mazhar Said, Gründer von MS Coaching"
+              alt="Mazhar Said, Gründer von klarvoran"
               width={480}
               height={480}
               priority
@@ -76,8 +76,9 @@ export default function HomePage() {
           <Card>
             <h2 className="text-lg font-bold text-navy">Wer ist das?</h2>
             <p className="mt-2 text-sm leading-relaxed text-navy-600">
-              MS Coaching ist ein eigenständig nach § 178 SGB III zugelassener Bildungsträger – kein Honorarcoach im
-              Coachpool eines fremden Trägers, sondern selbst zertifiziert (CERTQUA {siteConfig.certificate.number}).
+              klarvoran ist das Bewerbungscoaching-Programm von MS Coaching – Mazhar Said, einem eigenständig nach
+              § 178 SGB III zugelassenen Bildungsträger – kein Honorarcoach im Coachpool eines fremden Trägers,
+              sondern selbst zertifiziert (CERTQUA {siteConfig.certificate.number}).
             </p>
           </Card>
           <Card>
@@ -144,7 +145,7 @@ export default function HomePage() {
               „Ich bringe eine juristisch-strukturierte Denkweise mit pädagogischer Erfahrung zusammen – damit dein
               Weg zurück in den Job planbar wird, statt diffus zu bleiben.“
             </blockquote>
-            <p className="mt-4 text-sm text-navy-600">Mazhar Said, Gründer von MS Coaching</p>
+            <p className="mt-4 text-sm text-navy-600">Mazhar Said, Gründer von klarvoran</p>
             <Button href="/ueber-den-coach" variant="text" className="mt-5">
               Mehr über Mazhar erfahren →
             </Button>

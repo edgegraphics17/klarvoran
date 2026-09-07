@@ -13,8 +13,8 @@ export function Footer() {
             <span className="text-lg">{siteConfig.name}</span>
           </Link>
           <p className="mt-4 text-sm leading-relaxed text-white/70">
-            AZAV-zugelassener Bildungsträger für individuelles Bewerbungscoaching in Frankfurt am Main und im
-            Rhein-Main-Gebiet.
+            Die Marke von {siteConfig.legalName}, AZAV-zugelassener Bildungsträger für individuelles
+            Bewerbungscoaching in Frankfurt am Main und im Rhein-Main-Gebiet.
           </p>
           <p className="mt-4 font-mono text-xs text-white/50">
             CERTQUA-Zertifikat {siteConfig.certificate.number}

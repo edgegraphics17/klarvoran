@@ -10,7 +10,7 @@ import { siteConfig } from "@/lib/site-config";
 export const metadata: Metadata = {
   title: "Ablauf",
   description:
-    "Vom Erstkontakt bis zur Teilnahmebescheinigung: So läuft dein Bewerbungscoaching bei MS Coaching in Frankfurt und Kriftel ab.",
+    "Vom Erstkontakt bis zur Teilnahmebescheinigung: So läuft dein Bewerbungscoaching bei klarvoran in Frankfurt und Kriftel ab.",
   alternates: { canonical: "/ablauf" },
 };
 

@@ -5,7 +5,7 @@ export type FaqItem = {
 
 export const generalFaq: FaqItem[] = [
   {
-    question: "Kostet das Coaching bei MS Coaching etwas?",
+    question: "Kostet das Coaching bei klarvoran etwas?",
     answer:
       "Nein. Wenn dein Jobcenter oder deine Agentur für Arbeit dir einen AVGS (Aktivierungs- und Vermittlungsgutschein) bewilligt, ist das Coaching für dich kostenfrei. Die Kosten übernimmt direkt der Kostenträger.",
   },
@@ -35,9 +35,9 @@ export const generalFaq: FaqItem[] = [
       "Ja, unbedingt. Wir erklären dir, wie die Beantragung funktioniert, und du kannst mit uns sprechen, bevor du zu deiner Vermittlungsfachkraft gehst.",
   },
   {
-    question: "Ist MS Coaching ein zugelassener Träger?",
+    question: "Ist klarvoran ein zugelassener Träger?",
     answer:
-      "Ja. MS Coaching ist seit dem 24.07.2026 nach § 178 SGB III als Träger zugelassen, zertifiziert durch CERTQUA (Zertifikat-Nr. 26-20859-T, gültig bis 23.07.2031). Auch die konkrete Maßnahme ist zugelassen.",
+      "Ja. klarvoran ist die Marke von MS Coaching – Mazhar Said, seit dem 24.07.2026 nach § 178 SGB III als Träger zugelassen und zertifiziert durch CERTQUA (Zertifikat-Nr. 26-20859-T, gültig bis 23.07.2031). Auch die konkrete Maßnahme ist zugelassen.",
   },
   {
     question: "Was passiert, wenn ich einen Termin nicht wahrnehmen kann?",

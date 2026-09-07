@@ -8,7 +8,7 @@ export function CoachProfile() {
       <div className="mx-auto w-56 sm:w-64 lg:mx-0 lg:w-full">
         <Image
           src={siteConfig.images.badge}
-          alt="Portrait von Mazhar Said, Gründer von MS Coaching"
+          alt="Portrait von Mazhar Said, Gründer von klarvoran"
           width={320}
           height={320}
           className="w-full rounded-[var(--radius-lg)]"
@@ -20,7 +20,7 @@ export function CoachProfile() {
         <div>
           <h2 className="text-2xl font-bold text-navy sm:text-3xl">Mazhar Said</h2>
           <p className="mt-3 text-lg leading-relaxed text-navy-600">
-            Ich habe MS Coaching gegründet, weil ich aus eigener beruflicher Erfahrung weiß, wie viel Unterschied
+            Ich habe klarvoran gegründet, weil ich aus eigener beruflicher Erfahrung weiß, wie viel Unterschied
             eine klare Struktur und jemand macht, der sich wirklich Zeit nimmt. Mein Weg führte über eine
             juristische Ausbildung, den Vertrieb und die pädagogische Arbeit mit Menschen in herausfordernden
             Situationen zum Bewerbungscoaching – genau diese Mischung bringe ich in jedes Gespräch mit dir ein.
@@ -58,7 +58,7 @@ export function CoachProfile() {
           <p className="text-sm leading-relaxed text-navy">
             <strong className="font-semibold">Als Dozent beim BWHW</strong> erreichten im Juni 2026 drei
             Teilnehmende aus meiner BvB-Gruppe einen Ausbildungsplatz. Das war eine Vermittlung im Rahmen meiner
-            Tätigkeit beim Bildungswerk der Hessischen Wirtschaft – kein eigenes Ergebnis von MS Coaching, aber ein
+            Tätigkeit beim Bildungswerk der Hessischen Wirtschaft – kein eigenes Ergebnis von klarvoran, aber ein
             gutes Beispiel dafür, wie ich arbeite.
           </p>
         </div>

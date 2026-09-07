@@ -26,7 +26,7 @@ export type AvgsResult = {
 };
 
 const DISCLAIMER =
-  "Diese Einschätzung ist eine erste Orientierung von MS Coaching und ersetzt keine verbindliche Entscheidung deines Jobcenters oder deiner Agentur für Arbeit.";
+  "Diese Einschätzung ist eine erste Orientierung von klarvoran und ersetzt keine verbindliche Entscheidung deines Jobcenters oder deiner Agentur für Arbeit.";
 
 /**
  * Regelbasierte, bewusst vorsichtige Einschätzung – keine Rechtsberatung und keine

@@ -5,7 +5,7 @@ import { siteConfig } from "@/lib/site-config";
 
 export const metadata: Metadata = {
   title: "Impressum",
-  description: "Impressum von MS Coaching gemäß § 5 TMG.",
+  description: "Impressum von klarvoran (MS Coaching – Mazhar Said) gemäß § 5 TMG.",
   alternates: { canonical: "/impressum" },
   robots: { index: true, follow: true },
 };
@@ -19,6 +19,12 @@ export default function ImpressumPage() {
         <h1 className="mt-4 text-3xl font-bold text-navy sm:text-4xl">Impressum</h1>
 
         <div className="mt-10 max-w-2xl space-y-8 text-navy-600">
+          <p className="text-sm">
+            <strong className="font-semibold text-navy">{siteConfig.name}</strong> ist die Marke, unter der{" "}
+            {siteConfig.legalName} auftritt. Rechtlich verantwortlich im Sinne dieses Impressums ist ausschließlich{" "}
+            {siteConfig.legalName}.
+          </p>
+
           <div>
             <h2 className="text-sm font-semibold uppercase tracking-wide text-navy-600">
               Angaben gemäß § 5 TMG

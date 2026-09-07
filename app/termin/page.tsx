@@ -7,7 +7,7 @@ import { siteConfig } from "@/lib/site-config";
 
 export const metadata: Metadata = {
   title: "Termin & Erstgespräch",
-  description: "Sichere dir dein kostenloses, unverbindliches Erstgespräch bei MS Coaching – online, per Formular oder telefonisch.",
+  description: "Sichere dir dein kostenloses, unverbindliches Erstgespräch bei klarvoran – online, per Formular oder telefonisch.",
   alternates: { canonical: "/termin" },
 };
 

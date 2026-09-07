@@ -4,7 +4,8 @@ export function OrganizationStructuredData() {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "EducationalOrganization",
-    name: siteConfig.legalName,
+    name: siteConfig.name,
+    legalName: siteConfig.legalName,
     url: siteConfig.url,
     logo: `${siteConfig.url}${siteConfig.images.badge}`,
     email: siteConfig.contact.email,
@@ -58,7 +59,8 @@ export function ServiceStructuredData() {
     serviceType: "Individuelles Bewerbungscoaching und Aktivierung",
     provider: {
       "@type": "EducationalOrganization",
-      name: siteConfig.legalName,
+      name: siteConfig.name,
+      legalName: siteConfig.legalName,
     },
     areaServed: {
       "@type": "City",
