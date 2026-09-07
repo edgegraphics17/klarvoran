@@ -23,7 +23,7 @@ export const siteConfig = {
   contact: {
     phoneDisplay,
     phoneHref: `tel:${digitsOnly(phoneDisplay).replace(/^0/, "+49")}`,
-    email: process.env.NEXT_PUBLIC_EMAIL ?? "hello@mscoaching.de",
+    email: process.env.NEXT_PUBLIC_EMAIL ?? "mazhar@klarvoran.de",
     whatsappNumber,
     whatsappHref: (message?: string) =>
       `https://wa.me/${whatsappNumber}${message ? `?text=${encodeURIComponent(message)}` : ""}`,
@@ -72,6 +72,12 @@ export const siteConfig = {
 
   images: {
     badge: "/images/mazhar-badge.png",
+    team: {
+      meetingTablet: "/images/team/meeting-tablet.jpg",
+      whiteboard: "/images/team/whiteboard-erklaerung.jpg",
+      einzelgespraech: "/images/team/einzelgespraech.jpg",
+      cvDurchsicht: "/images/team/cv-durchsicht.jpg",
+    },
   },
 
   nav: [
