@@ -26,7 +26,7 @@ export default function KontaktPage() {
           <div className="space-y-6">
             <div className="rounded-[var(--radius-md)] border border-navy-100 bg-white p-6">
               <h2 className="text-sm font-semibold uppercase tracking-wide text-navy-600">Telefon</h2>
-              <a href={siteConfig.contact.phoneHref} className="mt-2 block text-lg font-semibold text-navy hover:text-red">
+              <a href={siteConfig.contact.phoneHref} className="mt-2 block text-lg font-semibold text-navy hover:text-red-700">
                 {siteConfig.contact.phoneDisplay}
               </a>
             </div>
@@ -34,7 +34,7 @@ export default function KontaktPage() {
               <h2 className="text-sm font-semibold uppercase tracking-wide text-navy-600">E-Mail</h2>
               <a
                 href={`mailto:${siteConfig.contact.email}`}
-                className="mt-2 block break-all text-lg font-semibold text-navy hover:text-red"
+                className="mt-2 block break-all text-lg font-semibold text-navy hover:text-red-700"
               >
                 {siteConfig.contact.email}
               </a>

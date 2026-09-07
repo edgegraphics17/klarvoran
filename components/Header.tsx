@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
@@ -10,14 +10,28 @@ import { Button } from "./Button";
 export function Header() {
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
+  const menuButtonRef = useRef<HTMLButtonElement>(null);
+  const firstMobileLinkRef = useRef<HTMLAnchorElement>(null);
 
   useEffect(() => {
     function onKeyDown(e: KeyboardEvent) {
-      if (e.key === "Escape") setOpen(false);
+      if (e.key === "Escape" && open) {
+        setOpen(false);
+        menuButtonRef.current?.focus();
+      }
     }
     document.addEventListener("keydown", onKeyDown);
     return () => document.removeEventListener("keydown", onKeyDown);
-  }, []);
+  }, [open]);
+
+  useEffect(() => {
+    if (open) firstMobileLinkRef.current?.focus();
+  }, [open]);
+
+  function closeMenu() {
+    setOpen(false);
+    menuButtonRef.current?.focus();
+  }
 
   return (
     <header className="sticky top-0 z-40 border-b border-navy-100 bg-white/95 backdrop-blur">
@@ -41,8 +55,8 @@ export function Header() {
                 <Link
                   href={item.href}
                   aria-current={pathname === item.href ? "page" : undefined}
-                  className={`text-sm font-medium transition-colors motion-reduce:transition-none hover:text-red focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-navy rounded-[var(--radius-sm)] ${
-                    pathname === item.href ? "text-red" : "text-navy"
+                  className={`text-sm font-medium transition-colors motion-reduce:transition-none hover:text-red-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-navy rounded-[var(--radius-sm)] ${
+                    pathname === item.href ? "text-red-700" : "text-navy"
                   }`}
                 >
                   {item.label}
@@ -59,6 +73,7 @@ export function Header() {
         </div>
 
         <button
+          ref={menuButtonRef}
           type="button"
           className="flex h-10 w-10 items-center justify-center rounded-[var(--radius-sm)] text-navy lg:hidden focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-navy"
           aria-expanded={open}
@@ -81,14 +96,15 @@ export function Header() {
       {open && (
         <nav id="mobile-nav" aria-label="Mobile Navigation" className="border-t border-navy-100 bg-white lg:hidden">
           <ul className="flex flex-col gap-1 px-5 py-4">
-            {siteConfig.nav.map((item) => (
+            {siteConfig.nav.map((item, index) => (
               <li key={item.href}>
                 <Link
+                  ref={index === 0 ? firstMobileLinkRef : undefined}
                   href={item.href}
                   aria-current={pathname === item.href ? "page" : undefined}
-                  onClick={() => setOpen(false)}
+                  onClick={closeMenu}
                   className={`block rounded-[var(--radius-sm)] px-3 py-3 text-base font-medium focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-navy ${
-                    pathname === item.href ? "bg-navy-50 text-red" : "text-navy"
+                    pathname === item.href ? "bg-navy-50 text-red-700" : "text-navy"
                   }`}
                 >
                   {item.label}
@@ -96,7 +112,7 @@ export function Header() {
               </li>
             ))}
             <li className="mt-2">
-              <Button href="/termin" className="w-full" onClick={() => setOpen(false)}>
+              <Button href="/termin" className="w-full" onClick={closeMenu}>
                 Termin sichern
               </Button>
             </li>

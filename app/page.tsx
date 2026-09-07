@@ -103,7 +103,7 @@ export default function HomePage() {
             <Eyebrow tone="navy">Programm</Eyebrow>
             <h2 className="mt-3 text-2xl font-bold text-navy sm:text-3xl">Die 4 Coaching-Module</h2>
           </div>
-          <Link href="/coaching-angebot" className="text-sm font-semibold text-navy underline underline-offset-4 hover:text-red">
+          <Link href="/coaching-angebot" className="text-sm font-semibold text-navy underline underline-offset-4 hover:text-red-700">
             Alle Details zum Coaching-Angebot →
           </Link>
         </div>

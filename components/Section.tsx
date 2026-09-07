@@ -31,7 +31,9 @@ export function Section({
 
 export function Eyebrow({ children, tone = "red" }: { children: ReactNode; tone?: "red" | "navy" | "white" }) {
   const colors = {
-    red: "text-red bg-red/10",
+    // text-red-700 (not text-red): red at small/regular weight fails WCAG AA
+    // (~4.4:1) against white/tinted backgrounds. red-700 gives ~8:1.
+    red: "text-red-700 bg-red/10",
     navy: "text-navy bg-navy-50",
     white: "text-white bg-white/10",
   } as const;

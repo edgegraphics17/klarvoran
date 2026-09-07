@@ -20,7 +20,7 @@ export function Breadcrumbs({ items }: { items: Crumb[] }) {
       <div className="mx-auto max-w-6xl px-5 py-3 sm:px-6 lg:px-8">
         <ol className="flex flex-wrap items-center gap-1.5 text-sm text-navy-600">
           <li>
-            <Link href="/" className="hover:text-red focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-navy rounded-[var(--radius-sm)]">
+            <Link href="/" className="hover:text-red-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-navy rounded-[var(--radius-sm)]">
               Startseite
             </Link>
           </li>
@@ -32,7 +32,7 @@ export function Breadcrumbs({ items }: { items: Crumb[] }) {
                   {item.label}
                 </span>
               ) : (
-                <Link href={item.href} className="hover:text-red focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-navy rounded-[var(--radius-sm)]">
+                <Link href={item.href} className="hover:text-red-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-navy rounded-[var(--radius-sm)]">
                   {item.label}
                 </Link>
               )}

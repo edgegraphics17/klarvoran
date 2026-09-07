@@ -8,7 +8,7 @@ export function ModuleCard({ module }: { module: CoachingModule }) {
         <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-[var(--radius-sm)] bg-navy font-mono text-sm font-bold text-white" aria-hidden="true">
           {module.id}
         </span>
-        <span className="rounded-[var(--radius-full)] bg-red/10 px-3 py-1 font-mono text-xs font-semibold text-red">
+        <span className="rounded-[var(--radius-full)] bg-red/10 px-3 py-1 font-mono text-xs font-semibold text-red-700">
           {module.ue} UE
         </span>
       </div>
