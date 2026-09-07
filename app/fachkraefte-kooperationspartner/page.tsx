@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { Section, Eyebrow } from "@/components/Section";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
@@ -40,15 +41,26 @@ export default function FachkraeftePage() {
     <>
       <Breadcrumbs items={[{ href: "/fachkraefte-kooperationspartner", label: "Für Institutionen" }]} />
       <Section tone="white" className="pt-12">
-        <Eyebrow>Für Institutionen & Kooperationspartner</Eyebrow>
-        <h1 className="mt-4 max-w-3xl text-3xl font-bold text-navy sm:text-4xl">
-          Ein Träger, drei passende Ansprechpunkte
-        </h1>
-        <p className="mt-6 max-w-2xl text-lg leading-relaxed text-navy-600">
-          klarvoran ist die Marke, unter der {siteConfig.legalName} auftritt: eigenständig nach § 178 SGB III als
-          Träger zugelassen. Wählen Sie den Bereich, der zu Ihrer Institution passt – für alle anderen Fragen
-          erreichen Sie uns unten direkt.
-        </p>
+        <div className="grid items-center gap-10 lg:grid-cols-[1.1fr_0.7fr]">
+          <div>
+            <Eyebrow>Für Institutionen & Kooperationspartner</Eyebrow>
+            <h1 className="mt-4 max-w-3xl text-3xl font-bold text-navy sm:text-4xl">
+              Ein Träger, drei passende Ansprechpunkte
+            </h1>
+            <p className="mt-6 max-w-2xl text-lg leading-relaxed text-navy-600">
+              klarvoran ist die Marke, unter der {siteConfig.legalName} auftritt: eigenständig nach § 178 SGB III als
+              Träger zugelassen. Wählen Sie den Bereich, der zu Ihrer Institution passt – für alle anderen Fragen
+              erreichen Sie uns unten direkt.
+            </p>
+          </div>
+          <Image
+            src={siteConfig.images.team.meetingTablet}
+            alt="Abstimmungsgespräch mit einem Kooperationspartner"
+            width={1400}
+            height={781}
+            className="hidden w-full rounded-[var(--radius-lg)] lg:block"
+          />
+        </div>
       </Section>
 
       <Section tone="tint">

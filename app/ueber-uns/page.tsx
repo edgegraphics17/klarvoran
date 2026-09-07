@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { Section, Eyebrow } from "@/components/Section";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { Card } from "@/components/Card";
 import { CtaSection } from "@/components/CtaSection";
+import { siteConfig } from "@/lib/site-config";
 
 export const metadata: Metadata = {
   title: "Über uns",
@@ -24,15 +26,26 @@ export default function UeberUnsPage() {
     <>
       <Breadcrumbs items={[{ href: "/ueber-uns", label: "Über uns" }]} />
       <Section tone="white" className="pt-12">
-        <Eyebrow>Über uns</Eyebrow>
-        <h1 className="mt-4 max-w-3xl text-3xl font-bold text-navy sm:text-4xl">
-          Strukturiertes Coaching für nachhaltige berufliche Perspektiven
-        </h1>
-        <p className="mt-6 max-w-2xl text-lg leading-relaxed text-navy-600">
-          Unser Ziel ist es, arbeitsuchende Menschen durch strukturiertes, individuelles Coaching nachhaltig in
-          Arbeit, Ausbildung oder berufliche Perspektiven zu integrieren. Wir unterstützen dich dabei, deine
-          Kompetenzen zu erkennen, realistische berufliche Ziele zu definieren und diese systematisch umzusetzen.
-        </p>
+        <div className="grid items-center gap-10 lg:grid-cols-[1.1fr_0.9fr]">
+          <div>
+            <Eyebrow>Über uns</Eyebrow>
+            <h1 className="mt-4 max-w-xl text-3xl font-bold text-navy sm:text-4xl">
+              Strukturiertes Coaching für nachhaltige berufliche Perspektiven
+            </h1>
+            <p className="mt-6 max-w-xl text-lg leading-relaxed text-navy-600">
+              Unser Ziel ist es, arbeitsuchende Menschen durch strukturiertes, individuelles Coaching nachhaltig in
+              Arbeit, Ausbildung oder berufliche Perspektiven zu integrieren. Wir unterstützen dich dabei, deine
+              Kompetenzen zu erkennen, realistische berufliche Ziele zu definieren und diese systematisch umzusetzen.
+            </p>
+          </div>
+          <Image
+            src={siteConfig.images.team.meetingTablet}
+            alt="Mazhar Said im Gespräch mit Kooperationspartnern"
+            width={1400}
+            height={781}
+            className="w-full rounded-[var(--radius-lg)]"
+          />
+        </div>
       </Section>
 
       <Section tone="tint">

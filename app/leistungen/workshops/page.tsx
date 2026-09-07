@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { Section, Eyebrow } from "@/components/Section";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { Card } from "@/components/Card";
 import { CtaSection } from "@/components/CtaSection";
+import { siteConfig } from "@/lib/site-config";
 
 export const metadata: Metadata = {
   title: "Workshops & Team-Coachings für Gruppen",
@@ -50,15 +52,26 @@ export default function WorkshopsPage() {
     <>
       <Breadcrumbs items={[{ href: "/leistungen", label: "Leistungen" }, { href: "/leistungen/workshops", label: "Workshops & Team-Coachings" }]} />
       <Section tone="white" className="pt-12">
-        <Eyebrow>Workshops & Team-Coachings</Eyebrow>
-        <h1 className="mt-4 max-w-3xl text-3xl font-bold text-navy sm:text-4xl">
-          Coaching-Wissen für die ganze Gruppe
-        </h1>
-        <p className="mt-6 max-w-2xl text-lg leading-relaxed text-navy-600">
-          Für Einrichtungen, Schulen, Bildungsträger und Unternehmen: kompakte Workshop- und Team-Coaching-Formate
-          rund um Bewerbung, berufliche Orientierung und digitale Kompetenz – zugeschnitten auf die jeweilige
-          Gruppe statt als Standardvortrag.
-        </p>
+        <div className="grid items-center gap-10 lg:grid-cols-[1.05fr_0.95fr]">
+          <div>
+            <Eyebrow>Workshops & Team-Coachings</Eyebrow>
+            <h1 className="mt-4 max-w-xl text-3xl font-bold text-navy sm:text-4xl">
+              Coaching-Wissen für die ganze Gruppe
+            </h1>
+            <p className="mt-6 max-w-xl text-lg leading-relaxed text-navy-600">
+              Für Einrichtungen, Schulen, Bildungsträger und Unternehmen: kompakte Workshop- und Team-Coaching-Formate
+              rund um Bewerbung, berufliche Orientierung und digitale Kompetenz – zugeschnitten auf die jeweilige
+              Gruppe statt als Standardvortrag.
+            </p>
+          </div>
+          <Image
+            src={siteConfig.images.team.whiteboard}
+            alt="Mazhar Said erklärt einen Ablauf am Whiteboard"
+            width={1400}
+            height={781}
+            className="w-full rounded-[var(--radius-lg)]"
+          />
+        </div>
       </Section>
 
       <Section tone="tint">

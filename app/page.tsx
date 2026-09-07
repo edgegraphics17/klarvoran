@@ -131,6 +131,16 @@ export default function HomePage() {
               Zum Institutionen-Bereich
             </Button>
           </div>
+          <div className="relative hidden h-56 overflow-hidden rounded-[var(--radius-lg)] lg:block">
+            <Image
+              src={siteConfig.images.team.cvDurchsicht}
+              alt=""
+              fill
+              sizes="40vw"
+              className="object-cover opacity-80"
+            />
+            <div className="absolute inset-0 bg-navy/40" aria-hidden="true" />
+          </div>
         </div>
       </Section>
 

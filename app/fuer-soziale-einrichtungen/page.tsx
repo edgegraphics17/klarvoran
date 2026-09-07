@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { Section, Eyebrow } from "@/components/Section";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { Card, FactStat } from "@/components/Card";
@@ -38,8 +39,19 @@ export default function FuerSozialeEinrichtungenPage() {
       </Section>
 
       <Section tone="white">
-        <Eyebrow>Was wir anbieten</Eyebrow>
-        <h2 className="mt-3 text-2xl font-bold text-navy sm:text-3xl">Passend zu Ihrem Klientel</h2>
+        <div className="grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:items-start">
+          <Image
+            src={siteConfig.images.team.einzelgespraech}
+            alt="Individuelles Coaching-Gespräch"
+            width={1600}
+            height={678}
+            className="hidden w-full rounded-[var(--radius-lg)] lg:block"
+          />
+          <div>
+            <Eyebrow>Was wir anbieten</Eyebrow>
+            <h2 className="mt-3 text-2xl font-bold text-navy sm:text-3xl">Passend zu Ihrem Klientel</h2>
+          </div>
+        </div>
         <div className="mt-8 grid gap-5 sm:grid-cols-2">
           <Card>
             <h3 className="font-semibold text-navy">Einzelcoaching</h3>

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { Section, Eyebrow } from "@/components/Section";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { ProcessStepper } from "@/components/ProcessStepper";
@@ -27,6 +28,13 @@ export default function AblaufPage() {
           Fünf klare Schritte – transparent und nachvollziehbar, wie es sich für einen zertifizierten Träger
           gehört.
         </p>
+        <Image
+          src={siteConfig.images.team.whiteboard}
+          alt="Coaching-Ablauf wird gemeinsam durchgesprochen"
+          width={1400}
+          height={781}
+          className="mt-10 hidden w-full max-w-2xl rounded-[var(--radius-lg)] sm:block"
+        />
         <div className="mt-10">
           <ProcessStepper steps={processSteps} />
         </div>

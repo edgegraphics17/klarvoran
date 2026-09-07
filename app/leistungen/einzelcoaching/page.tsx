@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { Section, Eyebrow } from "@/components/Section";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { Card } from "@/components/Card";
@@ -36,15 +37,26 @@ export default function EinzelcoachingPage() {
     <>
       <Breadcrumbs items={[{ href: "/leistungen", label: "Leistungen" }, { href: "/leistungen/einzelcoaching", label: "1:1-Coaching" }]} />
       <Section tone="white" className="pt-12">
-        <Eyebrow>1:1-Coaching · Selbstzahler</Eyebrow>
-        <h1 className="mt-4 max-w-3xl text-3xl font-bold text-navy sm:text-4xl">
-          Individuelles Coaching – auch ohne AVGS
-        </h1>
-        <p className="mt-6 max-w-2xl text-lg leading-relaxed text-navy-600">
-          Nicht jeder hat Anspruch auf einen Aktivierungs- und Vermittlungsgutschein. Unser 1:1-Coaching folgt
-          derselben Methode wie das AVGS-Programm – als Selbstzahler-Angebot, in Umfang und Format frei
-          zugeschnitten auf deine Situation.
-        </p>
+        <div className="grid items-center gap-10 lg:grid-cols-[1.05fr_0.95fr]">
+          <div>
+            <Eyebrow>1:1-Coaching · Selbstzahler</Eyebrow>
+            <h1 className="mt-4 max-w-xl text-3xl font-bold text-navy sm:text-4xl">
+              Individuelles Coaching – auch ohne AVGS
+            </h1>
+            <p className="mt-6 max-w-xl text-lg leading-relaxed text-navy-600">
+              Nicht jeder hat Anspruch auf einen Aktivierungs- und Vermittlungsgutschein. Unser 1:1-Coaching folgt
+              derselben Methode wie das AVGS-Programm – als Selbstzahler-Angebot, in Umfang und Format frei
+              zugeschnitten auf deine Situation.
+            </p>
+          </div>
+          <Image
+            src={siteConfig.images.team.einzelgespraech}
+            alt="Individuelles 1:1-Coaching-Gespräch"
+            width={1600}
+            height={678}
+            className="w-full rounded-[var(--radius-lg)]"
+          />
+        </div>
       </Section>
 
       <Section tone="tint">
