@@ -1,24 +1,23 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import Link from "next/link";
 import { Section, Eyebrow } from "@/components/Section";
 import { Button } from "@/components/Button";
-import { Card, FactStat } from "@/components/Card";
+import { FactStat } from "@/components/Card";
 import { TrustBar } from "@/components/TrustBar";
-import { ModuleCard } from "@/components/ModuleCard";
+import { LeistungCard } from "@/components/LeistungCard";
 import { ProcessStepper } from "@/components/ProcessStepper";
 import { FaqAccordion } from "@/components/FaqAccordion";
 import { CtaSection } from "@/components/CtaSection";
 import { ServiceStructuredData } from "@/components/StructuredData";
-import { coachingModules, totalUe } from "@/lib/content/modules";
+import { leistungen } from "@/lib/content/leistungen";
 import { processSteps } from "@/lib/content/process";
 import { generalFaq } from "@/lib/content/faq";
 import { siteConfig } from "@/lib/site-config";
 
 export const metadata: Metadata = {
-  title: "AVGS Coaching Frankfurt – Kostenloses Bewerbungscoaching",
+  title: "klarvoran – Bewerbungscoaching, Workshops & Kooperationen",
   description:
-    "klarvoran: individuelles Bewerbungscoaching in Frankfurt am Main von MS Coaching – Mazhar Said, AZAV-zugelassener Bildungsträger. 32 UE in bis zu 8 Wochen – kostenfrei mit AVGS.",
+    "klarvoran: AVGS-Bewerbungscoaching, 1:1-Coaching, Workshops & Team-Coachings sowie Kooperationen für Institutionen – von MS Coaching – Mazhar Said, AZAV-zugelassener Bildungsträger in Frankfurt am Main.",
   alternates: { canonical: "/" },
 };
 
@@ -30,21 +29,21 @@ export default function HomePage() {
       <Section tone="white" className="pt-14 sm:pt-20">
         <div className="grid items-center gap-12 lg:grid-cols-[1.1fr_0.9fr]">
           <div>
-            <Eyebrow>AVGS Coaching Frankfurt · AZAV-zugelassener Träger</Eyebrow>
+            <Eyebrow>AZAV-zugelassener Bildungsträger · Frankfurt & Rhein-Main</Eyebrow>
             <h1 className="mt-5 text-4xl font-bold leading-tight text-navy sm:text-5xl">
-              0 € für dich. 32 Einheiten. Ein klarer Weg zurück in den Job.
+              Klar sehen. Selbstständig handeln. Beruflich vorankommen.
             </h1>
             <p className="mt-6 max-w-xl text-lg leading-relaxed text-navy-600">
-              Individuelles Bewerbungscoaching in Frankfurt am Main und im Rhein-Main-Gebiet – 1:1 mit Mazhar Said,
-              strukturiert in vier Modulen. Mit bewilligtem AVGS trägt dein Jobcenter oder deine Agentur für Arbeit
-              die vollen Kosten.
+              klarvoran begleitet Menschen mit individuellem Coaching in Arbeit – als AVGS-Maßnahme, als
+              Selbstzahler-Coaching oder als Workshop für Gruppen. Für Institutionen sind wir zugleich AZAV-
+              zugelassener Kooperationspartner.
             </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <Button href="/termin" size="lg">
                 Kostenloses Erstgespräch sichern
               </Button>
-              <Button href="/avgs#schnellcheck" variant="ghost" size="lg">
-                AVGS-Schnellcheck starten
+              <Button href="/fachkraefte-kooperationspartner" variant="ghost" size="lg">
+                Ich bin Institution / Fachkraft
               </Button>
             </div>
             <div className="mt-10">
@@ -63,54 +62,20 @@ export default function HomePage() {
             />
           </div>
         </div>
-
-        <div className="mt-16 grid grid-cols-3 gap-3 sm:gap-5">
-          <FactStat value={`${totalUe} UE`} label="Coaching-Umfang" />
-          <FactStat value="8 Wochen" label="Maximale Laufzeit" />
-          <FactStat value="0 €" label="Mit bewilligtem AVGS" />
-        </div>
       </Section>
 
       <Section tone="tint">
-        <div className="grid gap-8 sm:grid-cols-3">
-          <Card>
-            <h2 className="text-lg font-bold text-navy">Wer ist das?</h2>
-            <p className="mt-2 text-sm leading-relaxed text-navy-600">
-              klarvoran ist das Bewerbungscoaching-Programm von MS Coaching – Mazhar Said, einem eigenständig nach
-              § 178 SGB III zugelassenen Bildungsträger – kein Honorarcoach im Coachpool eines fremden Trägers,
-              sondern selbst zertifiziert (CERTQUA {siteConfig.certificate.number}).
-            </p>
-          </Card>
-          <Card>
-            <h2 className="text-lg font-bold text-navy">Für wen?</h2>
-            <p className="mt-2 text-sm leading-relaxed text-navy-600">
-              Für Arbeitsuchende bzw. von Arbeitslosigkeit bedrohte Personen im Raum Frankfurt/Rhein-Main mit
-              Unterstützungsbedarf im Bewerbungsprozess, bei der beruflichen Orientierung oder Integration.
-            </p>
-          </Card>
-          <Card>
-            <h2 className="text-lg font-bold text-navy">Warum 0 €?</h2>
-            <p className="mt-2 text-sm leading-relaxed text-navy-600">
-              Mit einem bewilligten AVGS zahlt dein Kostenträger direkt an uns. Du zahlst nichts – wir zeigen dir,
-              wie du den Gutschein bekommst.
-            </p>
-          </Card>
-        </div>
-      </Section>
-
-      <Section tone="white">
-        <div className="mb-10 flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
-          <div>
-            <Eyebrow tone="navy">Programm</Eyebrow>
-            <h2 className="mt-3 text-2xl font-bold text-navy sm:text-3xl">Die 4 Coaching-Module</h2>
-          </div>
-          <Link href="/coaching-angebot" className="text-sm font-semibold text-navy underline underline-offset-4 hover:text-red-700">
-            Alle Details zum Coaching-Angebot →
-          </Link>
+        <div className="mb-10 text-center">
+          <Eyebrow tone="navy">Leistungen</Eyebrow>
+          <h2 className="mt-3 text-2xl font-bold text-navy sm:text-3xl">Vier klare Wege zu klarvoran</h2>
+          <p className="mx-auto mt-3 max-w-2xl text-navy-600">
+            Eine Methode, vier Formate – je nachdem, ob du selbst einen Job suchst, ein Team weiterbilden willst
+            oder als Institution kooperieren möchtest.
+          </p>
         </div>
         <ul className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-          {coachingModules.map((m) => (
-            <ModuleCard key={m.id} module={m} />
+          {leistungen.map((l) => (
+            <LeistungCard key={l.id} leistung={l} />
           ))}
         </ul>
       </Section>
@@ -156,14 +121,14 @@ export default function HomePage() {
       <Section tone="navy">
         <div className="grid items-center gap-10 lg:grid-cols-2">
           <div>
-            <Eyebrow tone="white">Für Fachkräfte & Kooperationspartner</Eyebrow>
-            <h2 className="mt-3 text-2xl font-bold sm:text-3xl">Vermittlungsfachkräfte und Bildungsträger</h2>
+            <Eyebrow tone="white">Für Institutionen</Eyebrow>
+            <h2 className="mt-3 text-2xl font-bold sm:text-3xl">Jobcenter, soziale Einrichtungen & Bildungsträger</h2>
             <p className="mt-4 text-white/70">
-              Trägerstatus, Zulassung, Maßnahmedaten und Durchführungsqualität auf einen Blick – für Jobcenter,
-              Agentur für Arbeit und potenzielle Kooperationspartner.
+              Trägerstatus, Zulassung und Kooperationsmöglichkeiten – mit eigener Seite je nach Zielgruppe: Jobcenter,
+              soziale Einrichtungen oder Bildungsträger.
             </p>
             <Button href="/fachkraefte-kooperationspartner" variant="ghost" size="lg" className="mt-6 border-white text-white hover:bg-white/10">
-              Zum Fachkräfte-Bereich
+              Zum Institutionen-Bereich
             </Button>
           </div>
         </div>

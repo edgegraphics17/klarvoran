@@ -14,9 +14,9 @@ export const siteConfig = {
   legalName: "MS Coaching – Mazhar Said",
   founder: "Mazhar Said",
   claim: "Der schnellste Weg zur Arbeit",
-  tagline: "Kostenloses Bewerbungscoaching mit AVGS",
+  tagline: "Coaching, Workshops und berufliche Orientierung",
   description:
-    "klarvoran ist das Bewerbungscoaching-Programm von MS Coaching – Mazhar Said, einem AZAV-zugelassenen Bildungsträger in Frankfurt am Main. Individuelles Bewerbungscoaching nach § 45 SGB III – für Berechtigte kostenfrei mit AVGS.",
+    "klarvoran ist das Coaching- und Workshop-Programm von MS Coaching – Mazhar Said, einem AZAV-zugelassenen Bildungsträger in Frankfurt am Main: AVGS-Bewerbungscoaching nach § 45 SGB III, 1:1-Coaching, Workshops für Gruppen und Kooperationen mit Institutionen.",
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.klarvoran.de",
   locale: "de_DE",
 
@@ -76,12 +76,10 @@ export const siteConfig = {
 
   nav: [
     { href: "/", label: "Startseite" },
-    { href: "/ueber-uns", label: "Über uns" },
-    { href: "/coaching-angebot", label: "Coaching-Angebot" },
-    { href: "/avgs", label: "AVGS" },
+    { href: "/leistungen", label: "Leistungen" },
+    { href: "/fachkraefte-kooperationspartner", label: "Für Institutionen" },
     { href: "/ablauf", label: "Ablauf" },
-    { href: "/ueber-den-coach", label: "Über den Coach" },
-    { href: "/fachkraefte-kooperationspartner", label: "Fachkräfte & Partner" },
+    { href: "/ueber-uns", label: "Über uns" },
     { href: "/faq", label: "FAQ" },
     { href: "/kontakt", label: "Kontakt" },
   ],

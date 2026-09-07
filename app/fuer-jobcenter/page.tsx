@@ -1,0 +1,147 @@
+import type { Metadata } from "next";
+import { Section, Eyebrow } from "@/components/Section";
+import { Breadcrumbs } from "@/components/Breadcrumbs";
+import { Card, FactStat } from "@/components/Card";
+import { CertificateFacts } from "@/components/CertificateFacts";
+import { ContactForm } from "@/components/ContactForm";
+import { coachingModules, totalUe } from "@/lib/content/modules";
+import { siteConfig } from "@/lib/site-config";
+
+export const metadata: Metadata = {
+  title: "Für Jobcenter & Agentur für Arbeit",
+  description:
+    "AVGS-Coaching nach § 45 SGB III bei klarvoran (MS Coaching – Mazhar Said): AZAV-zugelassene Maßnahme, Zielgruppe, Ablauf und Ansprechpartner für Vermittlungsfachkräfte bei Jobcenter und Agentur für Arbeit.",
+  alternates: { canonical: "/fuer-jobcenter" },
+};
+
+export default function FuerJobcenterPage() {
+  return (
+    <>
+      <Breadcrumbs items={[{ href: "/fachkraefte-kooperationspartner", label: "Für Institutionen" }, { href: "/fuer-jobcenter", label: "Jobcenter & Agentur für Arbeit" }]} />
+
+      <Section tone="white" className="pt-12">
+        <Eyebrow>Für Jobcenter & Agentur für Arbeit</Eyebrow>
+        <h1 className="mt-4 max-w-3xl text-3xl font-bold text-navy sm:text-4xl">
+          AZAV-zugelassene Maßnahme für Ihre AVGS-Zuweisung
+        </h1>
+        <p className="mt-6 max-w-2xl text-lg leading-relaxed text-navy-600">
+          klarvoran ist die Marke von {siteConfig.legalName} – eigenständig nach § 178 SGB III als Bildungsträger
+          zugelassen, mit eigener zertifizierter Maßnahme. Diese Seite gibt Vermittlungsfachkräften einen
+          schnellen, belastbaren Überblick für die Zuweisung.
+        </p>
+      </Section>
+
+      <Section tone="tint">
+        <Eyebrow tone="navy">Maßnahme auf einen Blick</Eyebrow>
+        <h2 className="mt-3 text-2xl font-bold text-navy sm:text-3xl">
+          Individuelles Bewerbungscoaching nach § 45 SGB III
+        </h2>
+        <div className="mt-8 grid grid-cols-2 gap-3 sm:grid-cols-4 sm:gap-5">
+          <FactStat value={`${totalUe} UE`} label="à 45 Minuten" />
+          <FactStat value="8 Wochen" label="Maximale Laufzeit" />
+          <FactStat value="1:1" label="Einzelcoaching" />
+          <FactStat value="§ 45 SGB III" label="Rechtsgrundlage" />
+        </div>
+      </Section>
+
+      <Section tone="white">
+        <Eyebrow>Zulassung</Eyebrow>
+        <h2 className="mt-3 text-2xl font-bold text-navy sm:text-3xl">AZAV-Zulassung & Zertifizierung</h2>
+        <div className="mt-8">
+          <CertificateFacts />
+        </div>
+      </Section>
+
+      <Section tone="tint">
+        <Eyebrow tone="navy">Zielgruppe & Inhalte</Eyebrow>
+        <h2 className="mt-3 text-2xl font-bold text-navy sm:text-3xl">Für wen die Maßnahme geeignet ist</h2>
+        <div className="mt-8 grid gap-5 sm:grid-cols-2">
+          <Card>
+            <h3 className="font-semibold text-navy">Zielgruppe</h3>
+            <p className="mt-2 text-sm leading-relaxed text-navy-600">
+              Arbeitsuchende bzw. von Arbeitslosigkeit bedrohte Personen mit Unterstützungsbedarf bei beruflicher
+              Orientierung, im Bewerbungsprozess oder bei der Integration – ausdrücklich auch bei eingeschränkten
+              Deutschkenntnissen oder fehlender Digitalkompetenz.
+            </p>
+          </Card>
+          <Card>
+            <h3 className="font-semibold text-navy">Maßnahmeziel</h3>
+            <p className="mt-2 text-sm leading-relaxed text-navy-600">
+              Aktivierung und nachhaltige Integration in Arbeit oder Ausbildung durch strukturiertes,
+              individuelles Coaching – dokumentiert und messbar statt standardisiert.
+            </p>
+          </Card>
+        </div>
+        <div className="mt-8 overflow-x-auto rounded-[var(--radius-md)] border border-navy-100">
+          <table className="w-full min-w-[560px] border-collapse text-left text-sm">
+            <thead>
+              <tr className="bg-navy-50 text-navy">
+                <th scope="col" className="px-4 py-3 font-semibold">Modul</th>
+                <th scope="col" className="px-4 py-3 font-semibold">Inhalt</th>
+                <th scope="col" className="px-4 py-3 text-right font-mono font-semibold">UE</th>
+              </tr>
+            </thead>
+            <tbody>
+              {coachingModules.map((m) => (
+                <tr key={m.id} className="border-t border-navy-100 text-navy-600">
+                  <td className="px-4 py-3 font-medium text-navy">{m.title}</td>
+                  <td className="px-4 py-3">{m.outcome}</td>
+                  <td className="px-4 py-3 text-right font-mono">{m.ue}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </Section>
+
+      <Section tone="white">
+        <Eyebrow>Ablauf & Durchführung</Eyebrow>
+        <h2 className="mt-3 text-2xl font-bold text-navy sm:text-3xl">Von der Zuweisung bis zum Abschluss</h2>
+        <div className="mt-8 grid gap-5 sm:grid-cols-2">
+          <Card>
+            <h3 className="font-semibold text-navy">Durchführungsform</h3>
+            <p className="mt-2 text-sm leading-relaxed text-navy-600">
+              Präsenz ausschließlich in den {siteConfig.presenceLocation.name} ({siteConfig.presenceLocation.region}),
+              alternativ online oder hybrid. Keine Hausbesuche.
+            </p>
+          </Card>
+          <Card>
+            <h3 className="font-semibold text-navy">Dokumentation</h3>
+            <p className="mt-2 text-sm leading-relaxed text-navy-600">
+              Sitzungsdokumentation nach jeder Einheit, laufende Anwesenheitsdokumentation, Abschlussbericht und
+              Teilnahmebescheinigung mit Maßnahmebezeichnung, Zeitraum, Umfang und Inhalten.
+            </p>
+          </Card>
+          <Card>
+            <h3 className="font-semibold text-navy">Meldekanal</h3>
+            <p className="mt-2 text-sm leading-relaxed text-navy-600">
+              {siteConfig.legalName} ist unter der Kennung „{siteConfig.kursnet.id}" auf KURSNET / arbeitsagentur.de
+              gelistet.
+            </p>
+          </Card>
+          <Card>
+            <h3 className="font-semibold text-navy">Ansprechpartner für Zuweisung</h3>
+            <p className="mt-2 text-sm leading-relaxed text-navy-600">
+              {siteConfig.founder}, Gründer und Ansprechpartner für Gutschein-Zuweisungen und Rückfragen zur
+              Maßnahme – erreichbar über Kontaktformular, Telefon oder E-Mail.
+            </p>
+          </Card>
+        </div>
+      </Section>
+
+      <Section tone="navy">
+        <div className="mx-auto max-w-2xl text-center">
+          <Eyebrow tone="white">Zuweisung oder Rückfrage</Eyebrow>
+          <h2 className="mt-3 text-2xl font-bold sm:text-3xl">Teilnehmer zuweisen oder Rückfrage stellen</h2>
+          <p className="mt-4 text-white/70">
+            Ob Zuweisung, Rückfrage zur Maßnahme oder Prüfung der Passung – schreiben Sie uns direkt. Wir melden
+            uns zeitnah zurück.
+          </p>
+        </div>
+        <div className="mx-auto mt-10 max-w-xl rounded-[var(--radius-lg)] bg-white p-6 sm:p-8">
+          <ContactForm />
+        </div>
+      </Section>
+    </>
+  );
+}

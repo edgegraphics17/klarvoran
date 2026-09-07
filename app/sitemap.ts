@@ -3,12 +3,17 @@ import { siteConfig } from "@/lib/site-config";
 
 const paths = [
   "/",
+  "/leistungen",
+  "/leistungen/einzelcoaching",
+  "/leistungen/workshops",
   "/ueber-uns",
-  "/coaching-angebot",
   "/avgs",
   "/ablauf",
   "/ueber-den-coach",
   "/fachkraefte-kooperationspartner",
+  "/fuer-jobcenter",
+  "/fuer-soziale-einrichtungen",
+  "/fuer-bildungstraeger",
   "/faq",
   "/kontakt",
   "/termin",

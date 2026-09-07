@@ -24,6 +24,15 @@ const nextConfig: NextConfig = {
       },
     ];
   },
+  async redirects() {
+    return [
+      {
+        source: "/coaching-angebot",
+        destination: "/avgs",
+        permanent: true,
+      },
+    ];
+  },
 };
 
 export default nextConfig;
