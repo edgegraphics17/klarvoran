@@ -221,13 +221,13 @@ export default function HomePage() {
             />
           </div>
           <div>
-            <Eyebrow>Über den Coach</Eyebrow>
+            <Eyebrow>Gründer &amp; fachliche Leitung</Eyebrow>
             <blockquote className="mt-4 text-xl font-semibold leading-snug text-navy sm:text-2xl">
               „Ich bringe eine juristisch-strukturierte Denkweise mit pädagogischer Erfahrung zusammen – damit dein
               Weg zurück in den Job planbar wird, statt diffus zu bleiben.“
             </blockquote>
             <p className="mt-4 text-sm text-navy-600">Mazhar Said, Gründer von KlarVoran</p>
-            <Button href="/ueber-den-coach" variant="text" className="mt-5">
+            <Button href="/ueber-uns#gruender" variant="text" className="mt-5">
               Mehr über Mazhar erfahren →
             </Button>
           </div>

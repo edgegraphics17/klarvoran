@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { Section, Eyebrow } from "@/components/Section";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { Card } from "@/components/Card";
 import { CtaSection } from "@/components/CtaSection";
-import { ContextGraphic } from "@/components/ContextGraphic";
 import { siteConfig } from "@/lib/site-config";
 
 export const metadata: Metadata = {
@@ -49,9 +49,12 @@ export default function EinzelcoachingPage() {
               zugeschnitten auf deine Situation.
             </p>
           </div>
-          <ContextGraphic
-            variant="conversation"
-            title="Verständliches Gespräch mit klaren nächsten Schritten"
+          <Image
+            src={"/images/team/einzelgespraech.jpg"}
+            alt="Individuelles Coaching-Gespräch bei KlarVoran"
+            width={1600}
+            height={678}
+            className="w-full rounded-[var(--radius-lg)]"
           />
         </div>
       </Section>

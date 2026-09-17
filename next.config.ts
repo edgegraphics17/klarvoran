@@ -36,6 +36,11 @@ const nextConfig: NextConfig = {
         destination: "/avgs",
         permanent: true,
       },
+      {
+        source: "/ueber-den-coach",
+        destination: "/ueber-uns#gruender",
+        permanent: true,
+      },
     ];
   },
 };

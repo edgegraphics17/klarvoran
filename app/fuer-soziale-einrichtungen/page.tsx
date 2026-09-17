@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { Section, Eyebrow } from "@/components/Section";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { Card, FactStat } from "@/components/Card";
 import { CertificateSeal } from "@/components/CertificateSeal";
 import { ContactForm } from "@/components/ContactForm";
-import { ContextGraphic } from "@/components/ContextGraphic";
 import { siteConfig } from "@/lib/site-config";
 
 export const metadata: Metadata = {
@@ -56,10 +56,12 @@ export default function FuerSozialeEinrichtungenPage() {
 
       <Section tone="white">
         <div className="grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:items-start">
-          <ContextGraphic
-            variant="conversation"
-            title="Individuelle Unterstützung mit verständlichen nächsten Schritten"
-            className="hidden lg:block"
+          <Image
+            src={"/images/team/einzelgespraech.jpg"}
+            alt="Individuelles Coaching-Gespräch"
+            width={1600}
+            height={678}
+            className="hidden w-full rounded-[var(--radius-lg)] lg:block"
           />
           <div>
             <Eyebrow>Was wir anbieten</Eyebrow>
