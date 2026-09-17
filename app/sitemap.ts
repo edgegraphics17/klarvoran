@@ -13,6 +13,7 @@ const paths = [
   "/fuer-jobcenter",
   "/fuer-soziale-einrichtungen",
   "/fuer-bildungstraeger",
+  "/fuer-kommunen",
   "/faq",
   "/kontakt",
   "/termin",
