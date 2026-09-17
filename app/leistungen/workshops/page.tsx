@@ -1,10 +1,9 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import { Section, Eyebrow } from "@/components/Section";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { Card } from "@/components/Card";
 import { CtaSection } from "@/components/CtaSection";
-import { siteConfig } from "@/lib/site-config";
+import { ContextGraphic } from "@/components/ContextGraphic";
 
 export const metadata: Metadata = {
   title: "Workshops & Team-Coachings für Gruppen",
@@ -64,12 +63,9 @@ export default function WorkshopsPage() {
               Gruppe statt als Standardvortrag.
             </p>
           </div>
-          <Image
-            src={siteConfig.images.team.whiteboard}
-            alt="Mazhar Said erklärt einen Ablauf am Whiteboard"
-            width={1400}
-            height={781}
-            className="w-full rounded-[var(--radius-lg)]"
+          <ContextGraphic
+            variant="workshop"
+            title="Praxisnaher Workshop mit klaren Themen und Übungen"
           />
         </div>
       </Section>
