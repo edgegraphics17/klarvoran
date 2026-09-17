@@ -1,10 +1,9 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import { Section, Eyebrow } from "@/components/Section";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { Card } from "@/components/Card";
 import { CtaSection } from "@/components/CtaSection";
-import { siteConfig } from "@/lib/site-config";
+import { ContextGraphic } from "@/components/ContextGraphic";
 
 export const metadata: Metadata = {
   title: "Über uns",
@@ -38,12 +37,9 @@ export default function UeberUnsPage() {
               Kompetenzen zu erkennen, realistische berufliche Ziele zu definieren und diese systematisch umzusetzen.
             </p>
           </div>
-          <Image
-            src={siteConfig.images.team.meetingTablet}
-            alt="Mazhar Said im Gespräch mit Kooperationspartnern"
-            width={1400}
-            height={781}
-            className="w-full rounded-[var(--radius-lg)]"
+          <ContextGraphic
+            variant="cooperation"
+            title="KlarVoran verbindet persönliche Begleitung mit verlässlichen Strukturen"
           />
         </div>
       </Section>
