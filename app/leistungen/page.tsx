@@ -1,11 +1,10 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import { Section, Eyebrow } from "@/components/Section";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { LeistungCard } from "@/components/LeistungCard";
 import { CtaSection } from "@/components/CtaSection";
+import { ContextGraphic } from "@/components/ContextGraphic";
 import { leistungen } from "@/lib/content/leistungen";
-import { siteConfig } from "@/lib/site-config";
 
 export const metadata: Metadata = {
   title: "Leistungen – Coaching, Workshops & Kooperationen",
@@ -30,14 +29,11 @@ export default function LeistungenPage() {
         </p>
       </Section>
 
-      <div className="relative h-48 w-full overflow-hidden sm:h-64 lg:h-80">
-        <Image
-          src={siteConfig.images.team.cvDurchsicht}
-          alt="Bewerbungscoaching bei KlarVoran"
-          fill
-          sizes="100vw"
-          className="object-cover"
-          priority={false}
+      <div className="bg-navy-50 px-5 py-10 sm:px-6 lg:px-8">
+        <ContextGraphic
+          variant="application"
+          title="Bewerbungsunterlagen werden strukturiert geprüft und weiterentwickelt"
+          className="mx-auto max-w-3xl"
         />
       </div>
 

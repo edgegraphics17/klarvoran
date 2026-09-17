@@ -72,12 +72,6 @@ export const siteConfig = {
 
   images: {
     badge: "/images/mazhar-badge.png",
-    team: {
-      meetingTablet: "/images/team/meeting-tablet.jpg",
-      whiteboard: "/images/team/whiteboard-erklaerung.jpg",
-      einzelgespraech: "/images/team/einzelgespraech.jpg",
-      cvDurchsicht: "/images/team/cv-durchsicht.jpg",
-    },
   },
 
   nav: [

@@ -1,22 +1,21 @@
 import type { Metadata } from "next";
-import Image from "next/image";
-import Link from "next/link";
 import { Section, Eyebrow } from "@/components/Section";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
-import { Card } from "@/components/Card";
 import { CertificateFacts } from "@/components/CertificateFacts";
 import { CertificateSeal } from "@/components/CertificateSeal";
 import { ContactForm } from "@/components/ContactForm";
+import { ContextGraphic } from "@/components/ContextGraphic";
+import { InstitutionCard, type InstitutionTarget } from "@/components/InstitutionCard";
 import { siteConfig } from "@/lib/site-config";
 
 export const metadata: Metadata = {
   title: "Für Institutionen & Kooperationspartner",
   description:
-    "KlarVoran (MS Coaching – Mazhar Said) für Jobcenter, Agentur für Arbeit, soziale Einrichtungen und Bildungsträger: passende Informationen je Zielgruppe, Trägerzulassung und Kontakt für Kooperationen.",
+    "KlarVoran (MS Coaching – Mazhar Said) für Jobcenter, Agentur für Arbeit, soziale Einrichtungen, Bildungsträger, Kommunen und öffentliche Auftraggeber.",
   alternates: { canonical: "/fachkraefte-kooperationspartner" },
 };
 
-const audiences = [
+const audiences: InstitutionTarget[] = [
   {
     title: "Jobcenter & Agentur für Arbeit",
     text: "AVGS, § 45 SGB III, Maßnahmezulassung, Zielgruppe, Ablauf und Ansprechpartner für Ihre Zuweisung.",
@@ -35,6 +34,12 @@ const audiences = [
     href: "/fuer-bildungstraeger",
     cta: "Zur Seite für Bildungsträger",
   },
+  {
+    title: "Kommunen & öffentliche Auftraggeber",
+    text: "Klar abgegrenzte Bildungs-, Coaching- und Workshopaufträge für regionale Projekte und Vorhaben.",
+    href: "/fuer-kommunen",
+    cta: "Zur Seite für Kommunen",
+  },
 ];
 
 export default function FachkraeftePage() {
@@ -46,7 +51,7 @@ export default function FachkraeftePage() {
           <div>
             <Eyebrow tone="white">Für Institutionen & Kooperationspartner</Eyebrow>
             <h1 className="mt-4 max-w-3xl text-3xl font-bold text-white sm:text-4xl">
-              Ein Träger, drei passende Ansprechpunkte
+              Ein Träger, vier passende Wege
             </h1>
             <p className="mt-6 max-w-2xl text-lg leading-relaxed text-white/80">
               KlarVoran ist die Marke, unter der {siteConfig.legalName} auftritt: eigenständig nach § 178 SGB III als
@@ -54,29 +59,18 @@ export default function FachkraeftePage() {
               erreichen Sie uns unten direkt.
             </p>
           </div>
-          <Image
-            src={siteConfig.images.team.meetingTablet}
-            alt="Abstimmungsgespräch mit einem Kooperationspartner"
-            width={1400}
-            height={781}
-            className="hidden w-full rounded-[var(--radius-lg)] lg:block"
+          <ContextGraphic
+            variant="cooperation"
+            title="Vier institutionelle Wege führen zu KlarVoran"
+            className="hidden lg:block"
           />
         </div>
       </Section>
 
       <Section tone="tint">
-        <ul className="grid gap-6 sm:grid-cols-3">
+        <ul className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {audiences.map((a) => (
-            <Card key={a.href} as="li" className="flex flex-col gap-3">
-              <h2 className="text-lg font-bold text-navy">{a.title}</h2>
-              <p className="text-sm leading-relaxed text-navy-600">{a.text}</p>
-              <Link
-                href={a.href}
-                className="mt-auto text-sm font-semibold text-navy underline underline-offset-4 hover:text-red-700"
-              >
-                {a.cta} →
-              </Link>
-            </Card>
+            <InstitutionCard key={a.href} target={a} />
           ))}
         </ul>
       </Section>

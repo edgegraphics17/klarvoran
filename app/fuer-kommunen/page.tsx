@@ -1,0 +1,100 @@
+import type { Metadata } from "next";
+import { Breadcrumbs } from "@/components/Breadcrumbs";
+import { Card } from "@/components/Card";
+import { ContactForm } from "@/components/ContactForm";
+import { Eyebrow, Section } from "@/components/Section";
+
+export const metadata: Metadata = {
+  title: "Für Kommunen & öffentliche Auftraggeber",
+  description:
+    "KlarVoran übernimmt klar abgegrenzte Bildungs-, Coaching- und Workshopaufträge für Kommunen und öffentliche Auftraggeber im Rhein-Main-Gebiet.",
+  alternates: { canonical: "/fuer-kommunen" },
+};
+
+const services = [
+  {
+    title: "Bewerbungs- und Orientierungsmodule",
+    text: "Praxisnahe Einheiten zu beruflicher Orientierung, Bewerbungsunterlagen, Stellensuche und Vorstellungsgesprächen.",
+  },
+  {
+    title: "Workshops für konkrete Zielgruppen",
+    text: "Abgegrenzte Gruppenformate mit vorab vereinbarten Zielen, Inhalten und Ergebnissen.",
+  },
+  {
+    title: "Projektbezogene Coachingaufträge",
+    text: "Einzel- oder Kleingruppenangebote als klar beschriebener Baustein innerhalb eines regionalen Vorhabens.",
+  },
+];
+
+export default function FuerKommunenPage() {
+  return (
+    <>
+      <Breadcrumbs
+        items={[
+          { href: "/fachkraefte-kooperationspartner", label: "Für Institutionen" },
+          { href: "/fuer-kommunen", label: "Kommunen & öffentliche Auftraggeber" },
+        ]}
+      />
+
+      <Section tone="navy" className="pt-12">
+        <Eyebrow tone="white">Für Kommunen &amp; öffentliche Auftraggeber</Eyebrow>
+        <h1 className="mt-4 max-w-3xl text-3xl font-bold text-white sm:text-4xl">
+          Klare Bildungs- und Coachingaufträge. Persönlich und professionell umgesetzt.
+        </h1>
+        <p className="mt-6 max-w-2xl text-lg leading-relaxed text-white/80">
+          KlarVoran übernimmt überschaubare, klar abgegrenzte Coaching-, Bildungs- und Workshopaufträge im
+          Rhein-Main-Gebiet. Ziele, Umfang, Durchführung und Dokumentation werden vor dem Start verbindlich
+          abgestimmt.
+        </p>
+      </Section>
+
+      <Section tone="tint">
+        <Eyebrow tone="navy">Leistungsbausteine</Eyebrow>
+        <h2 className="mt-3 text-2xl font-bold text-navy sm:text-3xl">Was KlarVoran übernehmen kann</h2>
+        <div className="mt-8 grid gap-5 md:grid-cols-3">
+          {services.map((service) => (
+            <Card key={service.title}>
+              <h3 className="font-semibold text-navy">{service.title}</h3>
+              <p className="mt-2 text-sm leading-relaxed text-navy-600">{service.text}</p>
+            </Card>
+          ))}
+        </div>
+      </Section>
+
+      <Section tone="white">
+        <Eyebrow>Zusammenarbeit</Eyebrow>
+        <h2 className="mt-3 text-2xl font-bold text-navy sm:text-3xl">Ein klarer Auftrag statt unklarer Zuständigkeiten</h2>
+        <div className="mt-8 grid gap-5 sm:grid-cols-2">
+          <Card>
+            <h3 className="font-semibold text-navy">Vorab eindeutig vereinbart</h3>
+            <p className="mt-2 text-sm leading-relaxed text-navy-600">
+              Zielgruppe, Inhalte, Termine, Zuständigkeiten und gewünschte Nachweise werden vor der Durchführung
+              abgestimmt.
+            </p>
+          </Card>
+          <Card>
+            <h3 className="font-semibold text-navy">Realistisch zugeschnitten</h3>
+            <p className="mt-2 text-sm leading-relaxed text-navy-600">
+              KlarVoran bietet klar begrenzte Leistungsbausteine an und stellt sich nicht als Anbieter jeder großen
+              komplexen Gesamtmaßnahme dar.
+            </p>
+          </Card>
+        </div>
+      </Section>
+
+      <Section tone="navy">
+        <div className="mx-auto max-w-2xl text-center">
+          <Eyebrow tone="white">Auftrag besprechen</Eyebrow>
+          <h2 className="mt-3 text-2xl font-bold sm:text-3xl">Vorhaben oder Leistungsbaustein anfragen</h2>
+          <p className="mt-4 text-white/70">
+            Beschreiben Sie kurz Zielgruppe, gewünschte Leistung, Zeitraum und Rahmen. Wir prüfen die Passung und
+            melden uns zeitnah zurück.
+          </p>
+        </div>
+        <div className="mx-auto mt-10 max-w-xl rounded-[var(--radius-lg)] bg-white p-6 sm:p-8">
+          <ContactForm />
+        </div>
+      </Section>
+    </>
+  );
+}

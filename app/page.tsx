@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import Link from "next/link";
 import { Section, Eyebrow } from "@/components/Section";
 import { Button } from "@/components/Button";
 import { TrustBar } from "@/components/TrustBar";
@@ -8,6 +7,7 @@ import { LeistungCard } from "@/components/LeistungCard";
 import { FaqAccordion } from "@/components/FaqAccordion";
 import { CtaSection } from "@/components/CtaSection";
 import { CertificateSeal } from "@/components/CertificateSeal";
+import { InstitutionCard, type InstitutionTarget } from "@/components/InstitutionCard";
 import { ServiceStructuredData } from "@/components/StructuredData";
 import { leistungen } from "@/lib/content/leistungen";
 import { generalFaq } from "@/lib/content/faq";
@@ -24,8 +24,8 @@ export const metadata: Metadata = {
 // Gespräch, Wegweiser, Laptop, nächster Schritt.
 const methodSteps = [
   {
-    title: "Verstanden werden",
-    text: "Wir starten mit einem echten Gespräch: Deine Situation, deine Ziele, deine Hürden – ohne Formulare-Babysitting.",
+    title: "Verstehen",
+    text: "Wir starten mit einem echten Gespräch und klären deine Ausgangslage, deine Ziele und deine Hürden.",
     icon: (
       <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
         <path d="M4 5.5h16a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1H9l-4.2 3.4a.5.5 0 0 1-.8-.4V6.5a1 1 0 0 1 1-1Z" />
@@ -34,8 +34,8 @@ const methodSteps = [
     ),
   },
   {
-    title: "System verstehen",
-    text: "Jobcenter, AVGS, Bewerbungsprozess: Wir ordnen dein Umfeld und zeigen dir, wo deine Hebel liegen.",
+    title: "Gemeinsam umsetzen",
+    text: "Wir ordnen Anforderungen und arbeiten deine nächsten Schritte gemeinsam und praktisch durch.",
     icon: (
       <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
         <path d="M6 21V3" />
@@ -45,8 +45,8 @@ const methodSteps = [
     ),
   },
   {
-    title: "Selbst handeln",
-    text: "Bewerbung, Unterlagen, Gespräche: Du arbeitest mit konkreten Werkzeugen – 1:1 begleitet, in deinem Tempo.",
+    title: "Selbst übernehmen",
+    text: "Du passt Unterlagen an, recherchierst Stellen und bereitest Gespräche zunehmend selbst vor.",
     icon: (
       <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
         <rect x="4" y="5" width="16" height="10" rx="1" />
@@ -55,8 +55,8 @@ const methodSteps = [
     ),
   },
   {
-    title: "Dranbleiben",
-    text: "Zwischen den Terminen bleibt es nicht stehen: klare nächste Schritte, nach jeder Einheit dokumentiert.",
+    title: "Selbstständig weiterkommen",
+    text: "Du gehst mit einer klaren Struktur und Werkzeugen weiter, die du auch ohne uns anwenden kannst.",
     icon: (
       <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
         <path d="M3 20h5v-4h5v-4h5V8h3" />
@@ -66,7 +66,7 @@ const methodSteps = [
   },
 ];
 
-const institutionTargets = [
+const institutionTargets: InstitutionTarget[] = [
   {
     href: "/fuer-jobcenter",
     title: "Jobcenter & Agentur für Arbeit",
@@ -84,6 +84,12 @@ const institutionTargets = [
     title: "Bildungsträger",
     text: "Eigene AZAV-Struktur, BvB-Erfahrung und kurzfristiger Einsatz als Unterauftragnehmer.",
     cta: "Kooperation ansehen",
+  },
+  {
+    href: "/fuer-kommunen",
+    title: "Kommunen & öffentliche Auftraggeber",
+    text: "Klar abgegrenzte Coaching-, Bildungs- und Workshopaufträge für regionale Vorhaben.",
+    cta: "Leistungen für Kommunen",
   },
 ];
 
@@ -161,7 +167,7 @@ export default function HomePage() {
       <Section tone="navy">
         <div className="mb-10 text-center">
           <Eyebrow tone="white">Leistungen</Eyebrow>
-          <h2 className="mt-3 text-2xl font-bold text-white sm:text-3xl">Vier klare Wege zu KlarVoran</h2>
+          <h2 className="mt-3 text-2xl font-bold text-white sm:text-3xl">Vier Wege. Ein gemeinsamer Anspruch.</h2>
           <p className="mx-auto mt-3 max-w-2xl text-white/80">
             Eine Methode, vier Formate – je nachdem, ob du selbst einen Job suchst, ein Team weiterbilden willst
             oder als Institution kooperieren möchtest.
@@ -179,6 +185,9 @@ export default function HomePage() {
         <div className="mb-10">
           <Eyebrow tone="navy">Die Methode</Eyebrow>
           <h2 className="mt-3 text-2xl font-bold text-navy sm:text-3xl">In vier Schritten voran</h2>
+          <p className="mt-3 max-w-2xl text-navy-600">
+            Nicht nur gemeinsam erledigen. Lernen, es selbst zu können.
+          </p>
         </div>
         <ol className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {methodSteps.map((step, i) => (
@@ -225,37 +234,20 @@ export default function HomePage() {
         </div>
       </Section>
 
-      {/* Für Institutionen: dunkelblaue Fläche mit drei weißen Zielkarten. */}
+      {/* Für Institutionen: dunkelblaue Fläche mit vier weißen Zielkarten. */}
       <Section tone="navy">
         <div className="mb-10">
           <Eyebrow tone="white">Für Institutionen</Eyebrow>
           <h2 className="mt-3 text-2xl font-bold text-white sm:text-3xl">
-            Jobcenter, soziale Einrichtungen &amp; Bildungsträger
+            Jobcenter, Einrichtungen, Bildungsträger &amp; Kommunen
           </h2>
           <p className="mt-4 max-w-2xl text-white/80">
             Trägerstatus, Zulassung und Kooperationsmöglichkeiten – mit eigener Seite je nach Zielgruppe.
           </p>
         </div>
-        <ul className="grid gap-6 md:grid-cols-3">
+        <ul className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {institutionTargets.map((t) => (
-            <li key={t.href} className="list-none h-full">
-              <Link
-                href={t.href}
-                className="group flex h-full flex-col gap-3 rounded-[var(--radius-md)] border border-white/20 bg-white p-6 shadow-card transition-[color,background-color,border-color,transform,box-shadow] duration-200 motion-reduce:transition-none hover:-translate-y-0.5 hover:border-white hover:bg-navy hover:text-white hover:shadow-card-hover focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-btn-red"
-              >
-                <h3 className="text-lg font-bold text-navy transition-colors group-hover:text-white">{t.title}</h3>
-                <p className="text-sm leading-relaxed text-navy-600 transition-colors group-hover:text-white/80">
-                  {t.text}
-                </p>
-                <span
-                  aria-hidden="true"
-                  className="mt-auto flex items-center justify-between pt-2 text-sm font-semibold text-navy transition-colors group-hover:text-white"
-                >
-                  <span>{t.cta}</span>
-                  <span className="transition-transform duration-200 motion-reduce:transition-none group-hover:translate-x-1">→</span>
-                </span>
-              </Link>
-            </li>
+            <InstitutionCard key={t.href} target={t} />
           ))}
         </ul>
       </Section>
