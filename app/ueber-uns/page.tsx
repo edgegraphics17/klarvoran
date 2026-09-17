@@ -4,6 +4,7 @@ import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { Card } from "@/components/Card";
 import { CtaSection } from "@/components/CtaSection";
 import { ContextGraphic } from "@/components/ContextGraphic";
+import { CoachProfile } from "@/components/CoachProfile";
 
 export const metadata: Metadata = {
   title: "Über uns",
@@ -41,6 +42,18 @@ export default function UeberUnsPage() {
             variant="cooperation"
             title="KlarVoran verbindet persönliche Begleitung mit verlässlichen Strukturen"
           />
+        </div>
+      </Section>
+
+      <Section id="gruender" tone="white" className="scroll-mt-24">
+        <Eyebrow>Gründer &amp; fachliche Leitung</Eyebrow>
+        <p className="mt-4 max-w-3xl leading-relaxed text-navy-600">
+          KlarVoran arbeitet mit klaren Abläufen und verlässlichen Qualitätsstandards. Gegründet und fachlich
+          geleitet wird der Bildungsträger von Mazhar Said. Bei Bedarf ergänzen qualifizierte Vertretungs- und
+          Kooperationskräfte die Durchführung.
+        </p>
+        <div className="mt-10">
+          <CoachProfile />
         </div>
       </Section>
 

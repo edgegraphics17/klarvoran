@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { Section, Eyebrow } from "@/components/Section";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { CertificateFacts } from "@/components/CertificateFacts";
 import { CertificateSeal } from "@/components/CertificateSeal";
 import { ContactForm } from "@/components/ContactForm";
-import { ContextGraphic } from "@/components/ContextGraphic";
 import { InstitutionCard, type InstitutionTarget } from "@/components/InstitutionCard";
 import { siteConfig } from "@/lib/site-config";
 
@@ -59,10 +59,12 @@ export default function FachkraeftePage() {
               erreichen Sie uns unten direkt.
             </p>
           </div>
-          <ContextGraphic
-            variant="cooperation"
-            title="Vier institutionelle Wege führen zu KlarVoran"
-            className="hidden lg:block"
+          <Image
+            src={"/images/team/meeting-tablet.jpg"}
+            alt="Abstimmungsgespräch mit einem Kooperationspartner"
+            width={1400}
+            height={781}
+            className="hidden w-full rounded-[var(--radius-lg)] lg:block"
           />
         </div>
       </Section>

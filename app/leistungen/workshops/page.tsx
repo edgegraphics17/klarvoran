@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { Section, Eyebrow } from "@/components/Section";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { Card } from "@/components/Card";
 import { CtaSection } from "@/components/CtaSection";
-import { ContextGraphic } from "@/components/ContextGraphic";
 
 export const metadata: Metadata = {
   title: "Workshops & Team-Coachings für Gruppen",
@@ -63,9 +63,12 @@ export default function WorkshopsPage() {
               Gruppe statt als Standardvortrag.
             </p>
           </div>
-          <ContextGraphic
-            variant="workshop"
-            title="Praxisnaher Workshop mit klaren Themen und Übungen"
+          <Image
+            src={"/images/team/whiteboard-erklaerung.jpg"}
+            alt="Erklärung eines Ablaufs am Whiteboard"
+            width={1400}
+            height={781}
+            className="w-full rounded-[var(--radius-lg)]"
           />
         </div>
       </Section>
