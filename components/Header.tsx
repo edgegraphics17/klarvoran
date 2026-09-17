@@ -61,10 +61,10 @@ export function Header() {
                 <Link
                   href={item.href}
                   aria-current={pathname === item.href ? "page" : undefined}
-                  className={`text-sm font-medium transition-colors duration-200 motion-reduce:transition-none hover:underline hover:underline-offset-4 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white rounded-[var(--radius-sm)] ${
+                  className={`rounded-[var(--radius-sm)] px-2 py-1.5 text-sm font-medium transition-colors duration-200 motion-reduce:transition-none hover:bg-white hover:text-navy hover:underline hover:underline-offset-4 focus-visible:bg-white focus-visible:text-navy focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white ${
                     pathname === item.href
-                      ? "text-white underline underline-offset-4 font-semibold"
-                      : "text-white/80 hover:text-white"
+                      ? "bg-white/10 text-white underline underline-offset-4 font-semibold hover:bg-white hover:text-navy"
+                      : "text-white/80"
                   }`}
                 >
                   {item.label}
@@ -111,8 +111,8 @@ export function Header() {
                   href={item.href}
                   aria-current={pathname === item.href ? "page" : undefined}
                   onClick={closeMenu}
-                  className={`block rounded-[var(--radius-sm)] px-3 py-3 text-base font-medium focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white ${
-                    pathname === item.href ? "bg-white/10 text-white font-bold" : "text-white/80 hover:text-white"
+                  className={`block rounded-[var(--radius-sm)] px-3 py-3 text-base font-medium transition-colors duration-200 focus-visible:bg-white focus-visible:text-navy focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white ${
+                    pathname === item.href ? "bg-white/10 text-white font-bold" : "text-white/80 hover:bg-white hover:text-navy"
                   }`}
                 >
                   {item.label}

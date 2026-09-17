@@ -39,20 +39,20 @@ const base =
 // Abmessungen und Randstärke beim Hover-Wechsel nicht springen.
 const variants: Record<Variant, { light: string; dark: string }> = {
   primary: {
-    light: "bg-btn-red text-white border-2 border-btn-red hover:bg-navy hover:border-navy shadow-card",
-    dark: "bg-btn-red text-white border-2 border-btn-red hover:bg-white hover:text-navy hover:border-btn-red shadow-card",
+    light: "bg-btn-red text-white border-2 border-btn-red hover:bg-navy hover:border-navy focus-visible:bg-navy focus-visible:border-navy shadow-card",
+    dark: "bg-btn-red text-white border-2 border-btn-red hover:bg-white hover:text-navy hover:border-btn-red focus-visible:bg-white focus-visible:text-navy focus-visible:border-btn-red shadow-card",
   },
   secondary: {
-    light: "border-2 border-navy text-navy hover:bg-navy-50",
-    dark: "border-2 border-white text-white hover:bg-white hover:text-navy",
+    light: "border-2 border-navy text-navy hover:bg-navy-50 focus-visible:bg-navy-50",
+    dark: "border-2 border-white text-white hover:bg-white hover:text-navy focus-visible:bg-white focus-visible:text-navy",
   },
   ghost: {
-    light: "border-2 border-navy text-navy hover:bg-navy-50",
-    dark: "border-2 border-white text-white hover:bg-white hover:text-navy",
+    light: "border-2 border-navy text-navy hover:bg-navy-50 focus-visible:bg-navy-50",
+    dark: "border-2 border-white text-white hover:bg-white hover:text-navy focus-visible:bg-white focus-visible:text-navy",
   },
   text: {
-    light: "text-navy underline underline-offset-4 decoration-navy-100 hover:text-btn-red hover:decoration-btn-red px-0",
-    dark: "text-white underline underline-offset-4 decoration-white/50 hover:text-white hover:decoration-white px-0",
+    light: "text-navy underline underline-offset-4 decoration-navy-100 hover:text-btn-red hover:decoration-btn-red focus-visible:text-btn-red focus-visible:decoration-btn-red px-0",
+    dark: "text-white underline underline-offset-4 decoration-white/50 hover:text-white hover:decoration-white focus-visible:text-white focus-visible:decoration-white px-0",
   },
 };
 

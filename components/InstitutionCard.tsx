@@ -1,0 +1,35 @@
+import Link from "next/link";
+
+export type InstitutionTarget = {
+  href: string;
+  title: string;
+  text: string;
+  cta: string;
+};
+
+export function InstitutionCard({ target }: { target: InstitutionTarget }) {
+  return (
+    <li className="h-full list-none">
+      <Link
+        href={target.href}
+        className="group flex h-full flex-col gap-3 rounded-[var(--radius-md)] border border-navy-100 bg-white p-6 shadow-card transition-[color,background-color,border-color,transform,box-shadow] duration-200 motion-reduce:transition-none hover:-translate-y-0.5 hover:border-white hover:bg-navy hover:text-white hover:shadow-card-hover focus-visible:-translate-y-0.5 focus-visible:border-white focus-visible:bg-navy focus-visible:text-white focus-visible:shadow-card-hover focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-btn-red"
+      >
+        <h3 className="text-lg font-bold text-navy transition-colors duration-200 group-hover:text-white group-focus-visible:text-white">
+          {target.title}
+        </h3>
+        <p className="text-sm leading-relaxed text-navy-600 transition-colors duration-200 group-hover:text-white/80 group-focus-visible:text-white/80">
+          {target.text}
+        </p>
+        <span
+          aria-hidden="true"
+          className="mt-auto flex items-center justify-between pt-2 text-sm font-semibold text-navy transition-colors duration-200 group-hover:text-white group-focus-visible:text-white"
+        >
+          <span>{target.cta}</span>
+          <span className="transition-transform duration-200 motion-reduce:transition-none group-hover:translate-x-1 group-focus-visible:translate-x-1">
+            →
+          </span>
+        </span>
+      </Link>
+    </li>
+  );
+}
