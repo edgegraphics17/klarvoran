@@ -19,12 +19,12 @@ export default function FuerSozialeEinrichtungenPage() {
     <>
       <Breadcrumbs items={[{ href: "/fachkraefte-kooperationspartner", label: "Für Institutionen" }, { href: "/fuer-soziale-einrichtungen", label: "Soziale Einrichtungen" }]} />
 
-      <Section tone="white" className="pt-12">
-        <Eyebrow>Für soziale Einrichtungen, Caritas, IB & Beratungsstellen</Eyebrow>
-        <h1 className="mt-4 max-w-3xl text-3xl font-bold text-navy sm:text-4xl">
+      <Section tone="navy" className="pt-12">
+        <Eyebrow tone="white">Für soziale Einrichtungen, Caritas, IB & Beratungsstellen</Eyebrow>
+        <h1 className="mt-4 max-w-3xl text-3xl font-bold text-white sm:text-4xl">
           Ein externer Coaching-Partner für Ihre Klientinnen und Klienten
         </h1>
-        <p className="mt-6 max-w-2xl text-lg leading-relaxed text-navy-600">
+        <p className="mt-6 max-w-2xl text-lg leading-relaxed text-white/80">
           KlarVoran (MS Coaching – Mazhar Said) ergänzt Ihre Arbeit dort, wo eigene Kapazitäten für individuelles
           Bewerbungscoaching oder Workshops fehlen – unkompliziert, verlässlich und ohne langen Abstimmungsaufwand.
         </p>

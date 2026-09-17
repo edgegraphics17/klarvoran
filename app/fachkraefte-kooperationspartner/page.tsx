@@ -41,14 +41,14 @@ export default function FachkraeftePage() {
   return (
     <>
       <Breadcrumbs items={[{ href: "/fachkraefte-kooperationspartner", label: "Für Institutionen" }]} />
-      <Section tone="white" className="pt-12">
+      <Section tone="navy" className="pt-12">
         <div className="grid items-center gap-10 lg:grid-cols-[1.1fr_0.7fr]">
           <div>
-            <Eyebrow>Für Institutionen & Kooperationspartner</Eyebrow>
-            <h1 className="mt-4 max-w-3xl text-3xl font-bold text-navy sm:text-4xl">
+            <Eyebrow tone="white">Für Institutionen & Kooperationspartner</Eyebrow>
+            <h1 className="mt-4 max-w-3xl text-3xl font-bold text-white sm:text-4xl">
               Ein Träger, drei passende Ansprechpunkte
             </h1>
-            <p className="mt-6 max-w-2xl text-lg leading-relaxed text-navy-600">
+            <p className="mt-6 max-w-2xl text-lg leading-relaxed text-white/80">
               KlarVoran ist die Marke, unter der {siteConfig.legalName} auftritt: eigenständig nach § 178 SGB III als
               Träger zugelassen. Wählen Sie den Bereich, der zu Ihrer Institution passt – für alle anderen Fragen
               erreichen Sie uns unten direkt.

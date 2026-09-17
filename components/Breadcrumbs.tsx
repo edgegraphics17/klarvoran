@@ -16,11 +16,13 @@ export function Breadcrumbs({ items }: { items: Crumb[] }) {
   };
 
   return (
-    <nav aria-label="Breadcrumb" className="border-b border-navy-100 bg-navy-50/50">
+    // Dunkle Breadcrumb-Leiste: schließt optisch an den dunkelblauen Header an,
+    // damit jede Seite mit dunklem Einstieg beginnt (Kundenvorgabe).
+    <nav aria-label="Breadcrumb" className="border-b border-white/10 bg-navy">
       <div className="mx-auto max-w-6xl px-5 py-3 sm:px-6 lg:px-8">
-        <ol className="flex flex-wrap items-center gap-1.5 text-sm text-navy-600">
+        <ol className="flex flex-wrap items-center gap-1.5 text-sm text-white/70">
           <li>
-            <Link href="/" className="hover:text-red-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-navy rounded-[var(--radius-sm)]">
+            <Link href="/" className="hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white rounded-[var(--radius-sm)]">
               Startseite
             </Link>
           </li>
@@ -28,11 +30,11 @@ export function Breadcrumbs({ items }: { items: Crumb[] }) {
             <li key={item.href} className="flex items-center gap-1.5">
               <span aria-hidden="true">/</span>
               {i === items.length - 1 ? (
-                <span aria-current="page" className="text-navy">
+                <span aria-current="page" className="text-white">
                   {item.label}
                 </span>
               ) : (
-                <Link href={item.href} className="hover:text-red-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-navy rounded-[var(--radius-sm)]">
+                <Link href={item.href} className="hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white rounded-[var(--radius-sm)]">
                   {item.label}
                 </Link>
               )}

@@ -241,7 +241,7 @@ export default function HomePage() {
             <li key={t.href} className="list-none h-full">
               <Link
                 href={t.href}
-                className="group flex h-full flex-col gap-3 rounded-[var(--radius-md)] border border-white/20 bg-white p-6 shadow-card transition-all duration-200 motion-reduce:transition-none hover:-translate-y-0.5 hover:border-white hover:bg-navy hover:text-white hover:shadow-card-hover focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-btn-red"
+                className="group flex h-full flex-col gap-3 rounded-[var(--radius-md)] border border-white/20 bg-white p-6 shadow-card transition-[color,background-color,border-color,transform,box-shadow] duration-200 motion-reduce:transition-none hover:-translate-y-0.5 hover:border-white hover:bg-navy hover:text-white hover:shadow-card-hover focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-btn-red"
               >
                 <h3 className="text-lg font-bold text-navy transition-colors group-hover:text-white">{t.title}</h3>
                 <p className="text-sm leading-relaxed text-navy-600 transition-colors group-hover:text-white/80">

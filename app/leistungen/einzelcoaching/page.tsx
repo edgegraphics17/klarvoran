@@ -36,14 +36,14 @@ export default function EinzelcoachingPage() {
   return (
     <>
       <Breadcrumbs items={[{ href: "/leistungen", label: "Leistungen" }, { href: "/leistungen/einzelcoaching", label: "1:1-Coaching" }]} />
-      <Section tone="white" className="pt-12">
+      <Section tone="navy" className="pt-12">
         <div className="grid items-center gap-10 lg:grid-cols-[1.05fr_0.95fr]">
           <div>
-            <Eyebrow>1:1-Coaching · Selbstzahler</Eyebrow>
-            <h1 className="mt-4 max-w-xl text-3xl font-bold text-navy sm:text-4xl">
+            <Eyebrow tone="white">1:1-Coaching · Selbstzahler</Eyebrow>
+            <h1 className="mt-4 max-w-xl text-3xl font-bold text-white sm:text-4xl">
               Individuelles Coaching – auch ohne AVGS
             </h1>
-            <p className="mt-6 max-w-xl text-lg leading-relaxed text-navy-600">
+            <p className="mt-6 max-w-xl text-lg leading-relaxed text-white/80">
               Nicht jeder hat Anspruch auf einen Aktivierungs- und Vermittlungsgutschein. Unser 1:1-Coaching folgt
               derselben Methode wie das AVGS-Programm – als Selbstzahler-Angebot, in Umfang und Format frei
               zugeschnitten auf deine Situation.

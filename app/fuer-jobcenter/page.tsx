@@ -20,12 +20,12 @@ export default function FuerJobcenterPage() {
     <>
       <Breadcrumbs items={[{ href: "/fachkraefte-kooperationspartner", label: "Für Institutionen" }, { href: "/fuer-jobcenter", label: "Jobcenter & Agentur für Arbeit" }]} />
 
-      <Section tone="white" className="pt-12">
-        <Eyebrow>Für Jobcenter & Agentur für Arbeit</Eyebrow>
-        <h1 className="mt-4 max-w-3xl text-3xl font-bold text-navy sm:text-4xl">
+      <Section tone="navy" className="pt-12">
+        <Eyebrow tone="white">Für Jobcenter & Agentur für Arbeit</Eyebrow>
+        <h1 className="mt-4 max-w-3xl text-3xl font-bold text-white sm:text-4xl">
           AZAV-zugelassene Maßnahme für Ihre AVGS-Zuweisung
         </h1>
-        <p className="mt-6 max-w-2xl text-lg leading-relaxed text-navy-600">
+        <p className="mt-6 max-w-2xl text-lg leading-relaxed text-white/80">
           KlarVoran ist die Marke von {siteConfig.legalName} – eigenständig nach § 178 SGB III als Bildungsträger
           zugelassen, mit eigener zertifizierter Maßnahme. Diese Seite gibt Vermittlungsfachkräften einen
           schnellen, belastbaren Überblick für die Zuweisung.

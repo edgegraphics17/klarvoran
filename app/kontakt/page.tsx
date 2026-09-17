@@ -15,10 +15,10 @@ export default function KontaktPage() {
   return (
     <>
       <Breadcrumbs items={[{ href: "/kontakt", label: "Kontakt" }]} />
-      <Section tone="white" className="pt-12">
-        <Eyebrow>Kontakt</Eyebrow>
-        <h1 className="mt-4 max-w-3xl text-3xl font-bold text-navy sm:text-4xl">Sprich uns an</h1>
-        <p className="mt-6 max-w-2xl text-lg leading-relaxed text-navy-600">
+      <Section tone="navy" className="pt-12">
+        <Eyebrow tone="white">Kontakt</Eyebrow>
+        <h1 className="mt-4 max-w-3xl text-3xl font-bold text-white sm:text-4xl">Sprich uns an</h1>
+        <p className="mt-6 max-w-2xl text-lg leading-relaxed text-white/80">
           Ob per Telefon, WhatsApp, E-Mail oder Formular – wähle den Weg, der für dich am einfachsten ist.
         </p>
 

@@ -1,5 +1,44 @@
 import Link from "next/link";
+import type { ReactNode } from "react";
 import type { Leistung } from "@/lib/content/leistungen";
+
+// Einheitliche Icons je Leistung (Kundenvorgabe):
+// Dokument für Bewerbung, Kompass für Orientierung, Lernrunde für Workshops,
+// verknüpfte Bausteine für Kooperation.
+const icons: Record<string, ReactNode> = {
+  avgs: (
+    // Dokument – Bewerbung
+    <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+      <path d="M6 3h8l4 4v14H6V3Z" />
+      <path d="M14 3v4h4" />
+      <path d="M9 12h6M9 15.5h6M9 8.5h2" />
+    </svg>
+  ),
+  einzelcoaching: (
+    // Kompass – Orientierung
+    <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+      <circle cx="12" cy="12" r="9" />
+      <path d="m15.5 8.5-2.2 5-5 2.2 2.2-5 5-2.2Z" />
+    </svg>
+  ),
+  workshops: (
+    // Lernrunde – Workshop
+    <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+      <circle cx="12" cy="7.5" r="2.5" />
+      <circle cx="6" cy="16.5" r="2.5" />
+      <circle cx="18" cy="16.5" r="2.5" />
+      <path d="M10 9.5 7.2 14.4M14 9.5l2.8 4.9M8.5 16.5h7" />
+    </svg>
+  ),
+  kooperationen: (
+    // Verknüpfte Bausteine – Kooperation
+    <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+      <rect x="3.5" y="3.5" width="7" height="7" rx="1" />
+      <rect x="13.5" y="13.5" width="7" height="7" rx="1" />
+      <path d="M10.5 7h4.5a2 2 0 0 1 2 2v4.5M13.5 17H9a2 2 0 0 1-2-2v-4.5" />
+    </svg>
+  ),
+};
 
 /**
  * Ganz anklickbare Zielkarte mit genau einem Ziel: Die Karte selbst ist der Link.
@@ -7,6 +46,8 @@ import type { Leistung } from "@/lib/content/leistungen";
  * unten ist reines Dekor-Element der Karte.
  * Hover: Karte wechselt zu Dunkelblau mit weißer Schrift und weißem Rand,
  * hebt sich um maximal 2 px an. Labels/Icons werden passend umgestellt.
+ * Transition bewusst nur für color, background-color, border-color, transform
+ * und box-shadow (Kundenvorgabe: keine Voll-Animation).
  */
 export function LeistungCard({
   leistung,
@@ -19,7 +60,7 @@ export function LeistungCard({
     <li className="list-none h-full">
       <Link
         href={leistung.href}
-        className="group relative flex h-full flex-col gap-4 rounded-[var(--radius-md)] border border-navy-100 bg-white p-6 shadow-card transition-all duration-200 motion-reduce:transition-none hover:-translate-y-0.5 hover:border-white hover:bg-navy hover:text-white hover:shadow-card-hover focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-btn-red"
+        className="group relative flex h-full flex-col gap-4 rounded-[var(--radius-md)] border border-navy-100 bg-white p-6 shadow-card transition-[color,background-color,border-color,transform,box-shadow] duration-200 motion-reduce:transition-none hover:-translate-y-0.5 hover:border-white hover:bg-navy hover:text-white hover:shadow-card-hover focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-btn-red"
       >
         <div className="flex items-center justify-between gap-2">
           <span className="inline-flex items-center rounded-[var(--radius-full)] bg-navy-50 px-3 py-1 text-xs font-mono font-semibold uppercase tracking-wide text-navy transition-colors group-hover:bg-white/10 group-hover:text-white">
@@ -31,6 +72,12 @@ export function LeistungCard({
             </span>
           )}
         </div>
+
+        {icons[leistung.id] && (
+          <span className="text-btn-red transition-colors group-hover:text-white" aria-hidden="true">
+            {icons[leistung.id]}
+          </span>
+        )}
 
         <h3 className="text-xl font-bold text-navy transition-colors group-hover:text-white">
           {leistung.title}

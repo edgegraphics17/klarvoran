@@ -51,14 +51,14 @@ export default function WorkshopsPage() {
   return (
     <>
       <Breadcrumbs items={[{ href: "/leistungen", label: "Leistungen" }, { href: "/leistungen/workshops", label: "Workshops & Team-Coachings" }]} />
-      <Section tone="white" className="pt-12">
+      <Section tone="navy" className="pt-12">
         <div className="grid items-center gap-10 lg:grid-cols-[1.05fr_0.95fr]">
           <div>
-            <Eyebrow>Workshops & Team-Coachings</Eyebrow>
-            <h1 className="mt-4 max-w-xl text-3xl font-bold text-navy sm:text-4xl">
+            <Eyebrow tone="white">Workshops & Team-Coachings</Eyebrow>
+            <h1 className="mt-4 max-w-xl text-3xl font-bold text-white sm:text-4xl">
               Coaching-Wissen für die ganze Gruppe
             </h1>
-            <p className="mt-6 max-w-xl text-lg leading-relaxed text-navy-600">
+            <p className="mt-6 max-w-xl text-lg leading-relaxed text-white/80">
               Für Einrichtungen, Schulen, Bildungsträger und Unternehmen: kompakte Workshop- und Team-Coaching-Formate
               rund um Bewerbung, berufliche Orientierung und digitale Kompetenz – zugeschnitten auf die jeweilige
               Gruppe statt als Standardvortrag.

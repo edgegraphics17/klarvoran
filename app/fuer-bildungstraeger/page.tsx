@@ -19,12 +19,12 @@ export default function FuerBildungstraegerPage() {
     <>
       <Breadcrumbs items={[{ href: "/fachkraefte-kooperationspartner", label: "Für Institutionen" }, { href: "/fuer-bildungstraeger", label: "Bildungsträger" }]} />
 
-      <Section tone="white" className="pt-12">
-        <Eyebrow>Für Bildungsträger & Kooperationspartner</Eyebrow>
-        <h1 className="mt-4 max-w-3xl text-3xl font-bold text-navy sm:text-4xl">
+      <Section tone="navy" className="pt-12">
+        <Eyebrow tone="white">Für Bildungsträger & Kooperationspartner</Eyebrow>
+        <h1 className="mt-4 max-w-3xl text-3xl font-bold text-white sm:text-4xl">
           Verlässlicher Jobcoach für Unteraufträge und Kooperationen
         </h1>
-        <p className="mt-6 max-w-2xl text-lg leading-relaxed text-navy-600">
+        <p className="mt-6 max-w-2xl text-lg leading-relaxed text-white/80">
           {siteConfig.legalName} ist selbst nach § 178 SGB III als Träger zugelassen – kein Honorarcoach im
           Coachpool eines fremden Anbieters, sondern ein Partner mit eigener AZAV-Struktur, der auch als
           Unterauftragnehmer oder Honorardozent für andere Bildungsträger arbeitet.
