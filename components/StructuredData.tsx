@@ -1,35 +1,44 @@
 import { siteConfig } from "@/lib/site-config";
 
 export function OrganizationStructuredData() {
+  // @graph trennt die Träger-Entität (MS Coaching – Mazhar Said) und die Marke
+  // (KlarVoran) exakt – für Suchmaschinen und KI-Agenten (GEO).
   const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "EducationalOrganization",
-    name: siteConfig.name,
-    legalName: siteConfig.legalName,
-    url: siteConfig.url,
-    logo: `${siteConfig.url}${siteConfig.images.badge}`,
-    email: siteConfig.contact.email,
-    telephone: siteConfig.contact.phoneDisplay,
-    address: {
-      "@type": "PostalAddress",
-      streetAddress: siteConfig.address.street,
-      postalCode: siteConfig.address.zip,
-      addressLocality: siteConfig.address.city,
-      addressCountry: "DE",
-    },
-    founder: {
-      "@type": "Person",
-      name: siteConfig.founder,
-    },
-    hasCredential: {
-      "@type": "EducationalOccupationalCredential",
-      credentialCategory: "Trägerzulassung § 178 SGB III",
-      recognizedBy: {
-        "@type": "Organization",
-        name: siteConfig.certificate.issuerFull,
+    "@graph": [
+      {
+        "@type": "EducationalOrganization",
+        "@id": `${siteConfig.url}/#organization`,
+        name: siteConfig.name,
+        legalName: siteConfig.legalName,
+        url: siteConfig.url,
+        logo: `${siteConfig.url}${siteConfig.images.badge}`,
+        email: siteConfig.contact.email,
+        telephone: siteConfig.contact.phoneDisplay,
+        address: {
+          "@type": "PostalAddress",
+          streetAddress: siteConfig.address.street,
+          postalCode: siteConfig.address.zip,
+          addressLocality: siteConfig.address.city,
+          addressCountry: "DE",
+        },
+        founder: {
+          "@type": "Person",
+          name: siteConfig.founder,
+          jobTitle: "Zertifizierter Coach & Dozent",
+        },
+        hasCredential: {
+          "@type": "EducationalOccupationalCredential",
+          name: "AZAV-Trägerzulassung nach § 178 SGB III",
+          credentialCategory: "Zulassung als Träger nach dem Recht der Arbeitsförderung",
+          recognizedBy: {
+            "@type": "Organization",
+            name: siteConfig.certificate.issuerFull,
+          },
+          identifier: siteConfig.certificate.number,
+        },
       },
-      identifier: siteConfig.certificate.number,
-    },
+    ],
   };
 
   return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />;

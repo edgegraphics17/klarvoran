@@ -3,6 +3,7 @@ import { Section, Eyebrow } from "@/components/Section";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { Card, FactStat } from "@/components/Card";
 import { CertificateFacts } from "@/components/CertificateFacts";
+import { CertificateSeal } from "@/components/CertificateSeal";
 import { ContactForm } from "@/components/ContactForm";
 import { coachingModules, totalUe } from "@/lib/content/modules";
 import { siteConfig } from "@/lib/site-config";
@@ -10,7 +11,7 @@ import { siteConfig } from "@/lib/site-config";
 export const metadata: Metadata = {
   title: "Für Jobcenter & Agentur für Arbeit",
   description:
-    "AVGS-Coaching nach § 45 SGB III bei klarvoran (MS Coaching – Mazhar Said): AZAV-zugelassene Maßnahme, Zielgruppe, Ablauf und Ansprechpartner für Vermittlungsfachkräfte bei Jobcenter und Agentur für Arbeit.",
+    "AVGS-Coaching nach § 45 SGB III bei KlarVoran (MS Coaching – Mazhar Said): AZAV-zugelassene Maßnahme, Zielgruppe, Ablauf und Ansprechpartner für Vermittlungsfachkräfte bei Jobcenter und Agentur für Arbeit.",
   alternates: { canonical: "/fuer-jobcenter" },
 };
 
@@ -25,7 +26,7 @@ export default function FuerJobcenterPage() {
           AZAV-zugelassene Maßnahme für Ihre AVGS-Zuweisung
         </h1>
         <p className="mt-6 max-w-2xl text-lg leading-relaxed text-navy-600">
-          klarvoran ist die Marke von {siteConfig.legalName} – eigenständig nach § 178 SGB III als Bildungsträger
+          KlarVoran ist die Marke von {siteConfig.legalName} – eigenständig nach § 178 SGB III als Bildungsträger
           zugelassen, mit eigener zertifizierter Maßnahme. Diese Seite gibt Vermittlungsfachkräften einen
           schnellen, belastbaren Überblick für die Zuweisung.
         </p>
@@ -42,12 +43,23 @@ export default function FuerJobcenterPage() {
           <FactStat value="1:1" label="Einzelcoaching" />
           <FactStat value="§ 45 SGB III" label="Rechtsgrundlage" />
         </div>
+        {/* Maßnahmezeichen direkt bei der eigenen AVGS-Maßnahme (CERTQUA-Vorgabe). */}
+        <div className="mt-8">
+          <CertificateSeal
+            seal="massnahme"
+            caption="Individuelles Bewerbungscoaching nach § 45 SGB III (Zugelassene Maßnahme nach AZAV)"
+          />
+        </div>
       </Section>
 
       <Section tone="white">
         <Eyebrow>Zulassung</Eyebrow>
-        <h2 className="mt-3 text-2xl font-bold text-navy sm:text-3xl">AZAV-Zulassung & Zertifizierung</h2>
-        <div className="mt-8">
+        <h2 className="mt-3 text-2xl font-bold text-navy sm:text-3xl">AZAV-Zulassung &amp; Zertifizierung</h2>
+        <div className="mt-8 grid items-start gap-8 lg:grid-cols-[280px_1fr]">
+          <CertificateSeal
+            seal="traeger"
+            caption="MS Coaching – Mazhar Said (Zugelassener Träger nach § 178 SGB III)"
+          />
           <CertificateFacts />
         </div>
       </Section>
@@ -115,7 +127,7 @@ export default function FuerJobcenterPage() {
           <Card>
             <h3 className="font-semibold text-navy">Meldekanal</h3>
             <p className="mt-2 text-sm leading-relaxed text-navy-600">
-              {siteConfig.legalName} ist unter der Kennung „{siteConfig.kursnet.id}" auf KURSNET / arbeitsagentur.de
+              {siteConfig.legalName} ist unter der Kennung „{siteConfig.kursnet.id}&rdquo; auf KURSNET / arbeitsagentur.de
               gelistet.
             </p>
           </Card>

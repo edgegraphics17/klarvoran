@@ -29,10 +29,10 @@ export function CtaSection({
         <h2 className="text-2xl font-bold sm:text-3xl">{title}</h2>
         <p className="mt-4 text-white/70">{description}</p>
         <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
-          <Button href={primaryHref} size="lg">
+          <Button href={primaryHref} size="lg" onDark>
             {primaryLabel}
           </Button>
-          <Button href={secondaryHref} variant="ghost" size="lg" className="border-white text-white hover:bg-white/10">
+          <Button href={secondaryHref} variant="ghost" size="lg" onDark>
             {secondaryLabel}
           </Button>
         </div>

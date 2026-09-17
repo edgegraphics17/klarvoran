@@ -26,7 +26,7 @@ export type AvgsResult = {
 };
 
 const DISCLAIMER =
-  "Diese Einschätzung ist eine erste Orientierung von klarvoran und ersetzt keine verbindliche Entscheidung deines Jobcenters oder deiner Agentur für Arbeit.";
+  "Diese Einschätzung ist eine erste Orientierung von KlarVoran und ersetzt keine verbindliche Entscheidung deines Jobcenters oder deiner Agentur für Arbeit.";
 
 /**
  * Regelbasierte, bewusst vorsichtige Einschätzung – keine Rechtsberatung und keine

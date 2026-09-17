@@ -10,7 +10,7 @@ import { siteConfig } from "@/lib/site-config";
 export const metadata: Metadata = {
   title: "Leistungen – Coaching, Workshops & Kooperationen",
   description:
-    "Vier klare Wege zu klarvoran: AVGS-Bewerbungscoaching, 1:1-Coaching für Selbstzahler, Workshops & Team-Coachings für Gruppen sowie Kooperationen für Jobcenter, Träger und Einrichtungen.",
+    "Vier klare Wege zu KlarVoran: AVGS-Bewerbungscoaching, 1:1-Coaching für Selbstzahler, Workshops & Team-Coachings für Gruppen sowie Kooperationen für Jobcenter, Träger und Einrichtungen.",
   alternates: { canonical: "/leistungen" },
 };
 
@@ -25,7 +25,7 @@ export default function LeistungenPage() {
         </h1>
         <p className="mt-6 max-w-2xl text-lg leading-relaxed text-navy-600">
           Egal ob du selbst einen Job suchst, ein Team weiterbilden willst oder als Institution einen verlässlichen
-          Coaching-Partner brauchst: klarvoran bietet vier klar getrennte Leistungen mit derselben Methode und
+          Coaching-Partner brauchst: KlarVoran bietet vier klar getrennte Leistungen mit derselben Methode und
           demselben Anspruch an Struktur und Ergebnis.
         </p>
       </Section>
@@ -33,7 +33,7 @@ export default function LeistungenPage() {
       <div className="relative h-48 w-full overflow-hidden sm:h-64 lg:h-80">
         <Image
           src={siteConfig.images.team.cvDurchsicht}
-          alt="Bewerbungscoaching bei klarvoran"
+          alt="Bewerbungscoaching bei KlarVoran"
           fill
           sizes="100vw"
           className="object-cover"

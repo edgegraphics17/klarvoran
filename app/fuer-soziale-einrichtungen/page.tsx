@@ -3,13 +3,14 @@ import Image from "next/image";
 import { Section, Eyebrow } from "@/components/Section";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { Card, FactStat } from "@/components/Card";
+import { CertificateSeal } from "@/components/CertificateSeal";
 import { ContactForm } from "@/components/ContactForm";
 import { siteConfig } from "@/lib/site-config";
 
 export const metadata: Metadata = {
   title: "Für soziale Einrichtungen, Caritas & Beratungsstellen",
   description:
-    "klarvoran unterstützt soziale Einrichtungen, Caritas, IB und Beratungsstellen mit externen Coaching- und Workshopangeboten für ihre Klientinnen und Klienten – unkompliziert, kooperativ, im Rhein-Main-Gebiet.",
+    "KlarVoran unterstützt soziale Einrichtungen, Caritas, IB und Beratungsstellen mit externen Coaching- und Workshopangeboten für ihre Klientinnen und Klienten – unkompliziert, kooperativ, im Rhein-Main-Gebiet.",
   alternates: { canonical: "/fuer-soziale-einrichtungen" },
 };
 
@@ -24,7 +25,7 @@ export default function FuerSozialeEinrichtungenPage() {
           Ein externer Coaching-Partner für Ihre Klientinnen und Klienten
         </h1>
         <p className="mt-6 max-w-2xl text-lg leading-relaxed text-navy-600">
-          klarvoran (MS Coaching – Mazhar Said) ergänzt Ihre Arbeit dort, wo eigene Kapazitäten für individuelles
+          KlarVoran (MS Coaching – Mazhar Said) ergänzt Ihre Arbeit dort, wo eigene Kapazitäten für individuelles
           Bewerbungscoaching oder Workshops fehlen – unkompliziert, verlässlich und ohne langen Abstimmungsaufwand.
         </p>
       </Section>
@@ -35,6 +36,21 @@ export default function FuerSozialeEinrichtungenPage() {
           <FactStat value="Workshops" label="Für Gruppen" />
           <FactStat value="AZAV" label="Zugelassener Träger" />
           <FactStat value="Rhein-Main" label="Präsenz, online, hybrid" />
+        </div>
+      </Section>
+
+      {/* Trägerdaten: ausschließlich das Trägerzeichen, kein Maßnahmesiegel. */}
+      <Section tone="white" className="py-12 sm:py-14">
+        <Eyebrow>Trägerdaten im Überblick</Eyebrow>
+        <div className="mt-6 flex flex-col items-start gap-6 sm:flex-row sm:items-center">
+          <CertificateSeal
+            seal="traeger"
+            caption="MS Coaching – Mazhar Said (Zugelassener Träger nach § 178 SGB III)"
+          />
+          <p className="max-w-md text-sm leading-relaxed text-navy-600">
+            {siteConfig.legalName} ist eigenständig nach § 178 SGB III zugelassen und durch CERTQUA zertifiziert
+            (Zertifikat {siteConfig.certificate.number}).
+          </p>
         </div>
       </Section>
 
@@ -120,7 +136,7 @@ export default function FuerSozialeEinrichtungenPage() {
           <Card>
             <h3 className="font-semibold text-navy">Ansprechpartner</h3>
             <p className="mt-2 text-sm leading-relaxed text-navy-600">
-              Ein fester Ansprechpartner für alle Anfragen: {siteConfig.founder}, Gründer von klarvoran – kurze
+              Ein fester Ansprechpartner für alle Anfragen: {siteConfig.founder}, Gründer von KlarVoran – kurze
               Wege statt Callcenter.
             </p>
           </Card>

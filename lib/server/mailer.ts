@@ -43,7 +43,7 @@ export async function sendLead(payload: LeadPayload): Promise<SendResult> {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        from: process.env.LEAD_SENDER_EMAIL || `klarvoran Website <onboarding@resend.dev>`,
+        from: process.env.LEAD_SENDER_EMAIL || `KlarVoran Website <onboarding@resend.dev>`,
         to: [LEAD_RECIPIENT],
         reply_to: payload.email,
         subject,

@@ -34,15 +34,20 @@ export function Header() {
   }
 
   return (
-    <header className="sticky top-0 z-40 border-b border-navy-100 bg-white/95 backdrop-blur">
+    // Durchgehend dunkelblauer Header (Kundenvorgabe) – performant, SSR-stabil,
+    // ohne Scroll-Listener. Bleibt auch auf hellen Leseseiten lesbar.
+    <header className="sticky top-0 z-40 border-b border-white/10 bg-navy text-white">
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-5 py-3 sm:px-6 lg:px-8">
-        <Link href="/" className="flex items-center gap-2.5 font-bold text-navy focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-navy rounded-[var(--radius-sm)]">
+        <Link
+          href="/"
+          className="flex items-center gap-2.5 font-bold text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white rounded-[var(--radius-sm)]"
+        >
           <Image
             src={siteConfig.images.badge}
             alt=""
             width={40}
             height={40}
-            className="h-10 w-10 rounded-full"
+            className="h-10 w-10 rounded-full bg-white p-0.5"
             priority
           />
           <span className="text-lg leading-none">{siteConfig.name}</span>
@@ -55,8 +60,10 @@ export function Header() {
                 <Link
                   href={item.href}
                   aria-current={pathname === item.href ? "page" : undefined}
-                  className={`text-sm font-medium transition-colors motion-reduce:transition-none hover:text-red-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-navy rounded-[var(--radius-sm)] ${
-                    pathname === item.href ? "text-red-700" : "text-navy"
+                  className={`text-sm font-medium transition-colors duration-200 motion-reduce:transition-none hover:underline hover:underline-offset-4 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white rounded-[var(--radius-sm)] ${
+                    pathname === item.href
+                      ? "text-white underline underline-offset-4 font-semibold"
+                      : "text-white/80 hover:text-white"
                   }`}
                 >
                   {item.label}
@@ -67,7 +74,7 @@ export function Header() {
         </nav>
 
         <div className="hidden lg:block">
-          <Button href="/termin" size="md">
+          <Button href="/termin" size="md" onDark>
             Termin sichern
           </Button>
         </div>
@@ -75,7 +82,7 @@ export function Header() {
         <button
           ref={menuButtonRef}
           type="button"
-          className="flex h-10 w-10 items-center justify-center rounded-[var(--radius-sm)] text-navy lg:hidden focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-navy"
+          className="flex h-10 w-10 items-center justify-center rounded-[var(--radius-sm)] text-white lg:hidden focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
           aria-expanded={open}
           aria-controls="mobile-nav"
           aria-label={open ? "Menü schließen" : "Menü öffnen"}
@@ -94,7 +101,7 @@ export function Header() {
       </div>
 
       {open && (
-        <nav id="mobile-nav" aria-label="Mobile Navigation" className="border-t border-navy-100 bg-white lg:hidden">
+        <nav id="mobile-nav" aria-label="Mobile Navigation" className="border-t border-white/10 bg-navy lg:hidden">
           <ul className="flex flex-col gap-1 px-5 py-4">
             {siteConfig.nav.map((item, index) => (
               <li key={item.href}>
@@ -103,8 +110,8 @@ export function Header() {
                   href={item.href}
                   aria-current={pathname === item.href ? "page" : undefined}
                   onClick={closeMenu}
-                  className={`block rounded-[var(--radius-sm)] px-3 py-3 text-base font-medium focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-navy ${
-                    pathname === item.href ? "bg-navy-50 text-red-700" : "text-navy"
+                  className={`block rounded-[var(--radius-sm)] px-3 py-3 text-base font-medium focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white ${
+                    pathname === item.href ? "bg-white/10 text-white font-bold" : "text-white/80 hover:text-white"
                   }`}
                 >
                   {item.label}
@@ -112,7 +119,7 @@ export function Header() {
               </li>
             ))}
             <li className="mt-2">
-              <Button href="/termin" className="w-full" onClick={closeMenu}>
+              <Button href="/termin" className="w-full" onDark onClick={closeMenu}>
                 Termin sichern
               </Button>
             </li>

@@ -9,7 +9,7 @@ import { siteConfig } from "@/lib/site-config";
 export const metadata: Metadata = {
   title: "1:1-Coaching für Selbstzahler",
   description:
-    "Individuelles Bewerbungs- und Orientierungscoaching bei klarvoran (MS Coaching – Mazhar Said) auch ohne AVGS – flexibler Umfang, online, hybrid oder in Präsenz in Frankfurt am Main.",
+    "Individuelles Bewerbungs- und Orientierungscoaching bei KlarVoran (MS Coaching – Mazhar Said) auch ohne AVGS – flexibler Umfang, online, hybrid oder in Präsenz in Frankfurt am Main.",
   alternates: { canonical: "/leistungen/einzelcoaching" },
 };
 

@@ -7,7 +7,7 @@ import { CtaSection } from "@/components/CtaSection";
 export const metadata: Metadata = {
   title: "Über den Coach",
   description:
-    "Mazhar Said: Gründer von klarvoran, AZAV-zugelassener Träger (MS Coaching – Mazhar Said) in Frankfurt am Main. Qualifikationen, Erfahrung und Arbeitsweise.",
+    "Mazhar Said: Gründer von KlarVoran, AZAV-zugelassener Träger (MS Coaching – Mazhar Said) in Frankfurt am Main. Qualifikationen, Erfahrung und Arbeitsweise.",
   alternates: { canonical: "/ueber-den-coach" },
 };
 

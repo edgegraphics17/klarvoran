@@ -7,12 +7,14 @@ const items = [
   { label: "Eigenständiger Träger, kein Coachpool", value: null },
 ];
 
-export function TrustBar() {
+export function TrustBar({ tone = "light" }: { tone?: "light" | "dark" }) {
+  const textClass = tone === "dark" ? "text-white/80" : "text-navy-600";
+  const checkClass = tone === "dark" ? "text-white" : "text-red";
   return (
-    <ul className="flex flex-wrap items-center justify-center gap-x-8 gap-y-3 text-sm font-medium text-navy-600">
+    <ul className={`flex flex-wrap items-center justify-center gap-x-8 gap-y-3 text-sm font-medium ${textClass}`}>
       {items.map((item) => (
         <li key={item.label} className="flex items-center gap-2">
-          <svg viewBox="0 0 20 20" width="16" height="16" fill="none" aria-hidden="true" className="shrink-0 text-red">
+          <svg viewBox="0 0 20 20" width="16" height="16" fill="none" aria-hidden="true" className={`shrink-0 ${checkClass}`}>
             <path
               d="M4 10.5 8 14l8-9"
               stroke="currentColor"

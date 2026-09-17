@@ -5,13 +5,14 @@ import { Section, Eyebrow } from "@/components/Section";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { Card } from "@/components/Card";
 import { CertificateFacts } from "@/components/CertificateFacts";
+import { CertificateSeal } from "@/components/CertificateSeal";
 import { ContactForm } from "@/components/ContactForm";
 import { siteConfig } from "@/lib/site-config";
 
 export const metadata: Metadata = {
   title: "Für Institutionen & Kooperationspartner",
   description:
-    "klarvoran (MS Coaching – Mazhar Said) für Jobcenter, Agentur für Arbeit, soziale Einrichtungen und Bildungsträger: passende Informationen je Zielgruppe, Trägerzulassung und Kontakt für Kooperationen.",
+    "KlarVoran (MS Coaching – Mazhar Said) für Jobcenter, Agentur für Arbeit, soziale Einrichtungen und Bildungsträger: passende Informationen je Zielgruppe, Trägerzulassung und Kontakt für Kooperationen.",
   alternates: { canonical: "/fachkraefte-kooperationspartner" },
 };
 
@@ -48,7 +49,7 @@ export default function FachkraeftePage() {
               Ein Träger, drei passende Ansprechpunkte
             </h1>
             <p className="mt-6 max-w-2xl text-lg leading-relaxed text-navy-600">
-              klarvoran ist die Marke, unter der {siteConfig.legalName} auftritt: eigenständig nach § 178 SGB III als
+              KlarVoran ist die Marke, unter der {siteConfig.legalName} auftritt: eigenständig nach § 178 SGB III als
               Träger zugelassen. Wählen Sie den Bereich, der zu Ihrer Institution passt – für alle anderen Fragen
               erreichen Sie uns unten direkt.
             </p>
@@ -83,7 +84,12 @@ export default function FachkraeftePage() {
       <Section tone="white">
         <Eyebrow>Zulassung</Eyebrow>
         <h2 className="mt-3 text-2xl font-bold text-navy sm:text-3xl">Trägerdaten im Überblick</h2>
-        <div className="mt-8">
+        <div className="mt-8 grid items-start gap-8 lg:grid-cols-[280px_1fr]">
+          {/* Ausschließlich das Trägerzeichen – kein pauschales Maßnahmesiegel. */}
+          <CertificateSeal
+            seal="traeger"
+            caption="MS Coaching – Mazhar Said (Zugelassener Träger nach § 178 SGB III)"
+          />
           <CertificateFacts />
         </div>
       </Section>

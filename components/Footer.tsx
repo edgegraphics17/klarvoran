@@ -19,6 +19,23 @@ export function Footer() {
           <p className="mt-4 font-mono text-xs text-white/50">
             CERTQUA-Zertifikat {siteConfig.certificate.number}
           </p>
+          {/* Anbieterbereich: ausschließlich das Trägerzeichen, dezent und lesbar. */}
+          <div className="mt-4 w-52 rounded-[var(--radius-sm)] bg-white p-2">
+            <Link
+              href="/dokumente/CERTQUA.pdf"
+              className="block rounded-[var(--radius-sm)] p-1 transition-colors hover:bg-navy-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+              aria-label="CERTQUA – zugelassener Träger nach AZAV – Zertifikat Trägerzulassung (PDF)"
+            >
+              <Image
+                src="/images/zertifikate/Certqua_Zeichen_AZAV_gross_4c.jpg"
+                alt="CERTQUA – zugelassener Träger nach AZAV"
+                width={783}
+                height={396}
+                sizes="208px"
+                className="h-auto w-full object-contain"
+              />
+            </Link>
+          </div>
         </div>
 
         <nav aria-label="Seiten">

@@ -5,7 +5,7 @@ import { siteConfig } from "@/lib/site-config";
 
 export const metadata: Metadata = {
   title: "Impressum",
-  description: "Impressum von klarvoran (MS Coaching – Mazhar Said) gemäß § 5 TMG.",
+  description: "Impressum von KlarVoran (MS Coaching – Mazhar Said) gemäß § 5 TMG.",
   alternates: { canonical: "/impressum" },
   robots: { index: true, follow: true },
 };

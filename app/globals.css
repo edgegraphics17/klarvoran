@@ -10,6 +10,10 @@
   --brand-red-600: #c9151b;
   --brand-red-700: #a51116;
 
+  /* UI-Rot für Buttons & kleine Schrift: 5.99:1 Kontrast auf Weiß.
+     Markenrot (#ec1c23) bleibt für Dekoration und Akzente reserviert. */
+  --brand-btn-red: #c5161d;
+
   --radius-sm: 8px;
   --radius-md: 12px;
   --radius-lg: 20px;
@@ -34,6 +38,7 @@
   --color-red: var(--brand-red);
   --color-red-600: var(--brand-red-600);
   --color-red-700: var(--brand-red-700);
+  --color-btn-red: var(--brand-btn-red);
 
   --font-sans: var(--font-manrope);
   --font-mono: var(--font-mono-num);

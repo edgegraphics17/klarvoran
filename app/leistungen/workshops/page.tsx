@@ -9,7 +9,7 @@ import { siteConfig } from "@/lib/site-config";
 export const metadata: Metadata = {
   title: "Workshops & Team-Coachings für Gruppen",
   description:
-    "Workshops und Team-Coachings von klarvoran (MS Coaching – Mazhar Said) zu Bewerbung, beruflicher Orientierung und digitaler Kompetenz – für Einrichtungen, Schulen und Unternehmen im Rhein-Main-Gebiet.",
+    "Workshops und Team-Coachings von KlarVoran (MS Coaching – Mazhar Said) zu Bewerbung, beruflicher Orientierung und digitaler Kompetenz – für Einrichtungen, Schulen und Unternehmen im Rhein-Main-Gebiet.",
   alternates: { canonical: "/leistungen/workshops" },
 };
 

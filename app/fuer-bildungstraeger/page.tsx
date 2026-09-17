@@ -3,13 +3,14 @@ import { Section, Eyebrow } from "@/components/Section";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { Card, FactStat } from "@/components/Card";
 import { CertificateFacts } from "@/components/CertificateFacts";
+import { CertificateSeal } from "@/components/CertificateSeal";
 import { ContactForm } from "@/components/ContactForm";
 import { siteConfig } from "@/lib/site-config";
 
 export const metadata: Metadata = {
   title: "Für Bildungsträger & Kooperationspartner",
   description:
-    "klarvoran (MS Coaching – Mazhar Said) als Unterauftragnehmer, Honorardozent oder Jobcoach für Bildungsträger: eigene AZAV-Struktur, BvB-/Maßnahmeerfahrung, kurzfristiger regionaler Einsatz im Rhein-Main-Gebiet.",
+    "KlarVoran (MS Coaching – Mazhar Said) als Unterauftragnehmer, Honorardozent oder Jobcoach für Bildungsträger: eigene AZAV-Struktur, BvB-/Maßnahmeerfahrung, kurzfristiger regionaler Einsatz im Rhein-Main-Gebiet.",
   alternates: { canonical: "/fuer-bildungstraeger" },
 };
 
@@ -76,7 +77,7 @@ export default function FuerBildungstraegerPage() {
 
       <Section tone="tint">
         <Eyebrow tone="navy">Erfahrung & Reichweite</Eyebrow>
-        <h2 className="mt-3 text-2xl font-bold text-navy sm:text-3xl">Warum klarvoran als Partner</h2>
+        <h2 className="mt-3 text-2xl font-bold text-navy sm:text-3xl">Warum KlarVoran als Partner</h2>
         <div className="mt-8 grid gap-5 sm:grid-cols-2">
           <Card>
             <h3 className="font-semibold text-navy">BvB- und Maßnahmeerfahrung</h3>
@@ -111,7 +112,12 @@ export default function FuerBildungstraegerPage() {
       <Section tone="white">
         <Eyebrow>Trägerdaten</Eyebrow>
         <h2 className="mt-3 text-2xl font-bold text-navy sm:text-3xl">Zulassung im Überblick</h2>
-        <div className="mt-8">
+        <div className="mt-8 grid items-start gap-8 lg:grid-cols-[280px_1fr]">
+          {/* Ausschließlich das Trägerzeichen – kein pauschales Maßnahmesiegel. */}
+          <CertificateSeal
+            seal="traeger"
+            caption="MS Coaching – Mazhar Said (Zugelassener Träger nach § 178 SGB III)"
+          />
           <CertificateFacts />
         </div>
       </Section>

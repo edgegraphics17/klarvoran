@@ -31,6 +31,11 @@ const nextConfig: NextConfig = {
         destination: "/avgs",
         permanent: true,
       },
+      {
+        source: "/ablauf",
+        destination: "/avgs",
+        permanent: true,
+      },
     ];
   },
 };

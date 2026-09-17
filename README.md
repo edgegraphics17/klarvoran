@@ -1,6 +1,6 @@
-# klarvoran — Website
+# KlarVoran — Website
 
-Produktionsreife Website für **klarvoran**, die Marke von MS Coaching – Mazhar Said (AZAV-zugelassener Bildungsträger, Frankfurt am Main). Next.js 16 (App Router) · TypeScript · Tailwind CSS v4.
+Produktionsreife Website für **KlarVoran**, die Marke von MS Coaching – Mazhar Said (AZAV-zugelassener Bildungsträger, Frankfurt am Main). Next.js 16 (App Router) · TypeScript · Tailwind CSS v4.
 
 ## Setup
 

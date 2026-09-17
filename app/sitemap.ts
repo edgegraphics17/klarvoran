@@ -8,7 +8,6 @@ const paths = [
   "/leistungen/workshops",
   "/ueber-uns",
   "/avgs",
-  "/ablauf",
   "/ueber-den-coach",
   "/fachkraefte-kooperationspartner",
   "/fuer-jobcenter",

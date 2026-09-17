@@ -9,7 +9,7 @@ import { siteConfig } from "@/lib/site-config";
 export const metadata: Metadata = {
   title: "Über uns",
   description:
-    "klarvoran: Leitbild, Qualitätsverständnis und Werte des AZAV-zugelassenen Bildungsträgers (MS Coaching – Mazhar Said) für Bewerbungscoaching in Frankfurt am Main.",
+    "KlarVoran: Leitbild, Qualitätsverständnis und Werte des AZAV-zugelassenen Bildungsträgers (MS Coaching – Mazhar Said) für Bewerbungscoaching in Frankfurt am Main.",
   alternates: { canonical: "/ueber-uns" },
 };
 
