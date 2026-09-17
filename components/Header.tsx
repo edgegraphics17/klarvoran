@@ -6,6 +6,7 @@ import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { siteConfig } from "@/lib/site-config";
 import { Button } from "./Button";
+import { Logo } from "./Logo";
 
 export function Header() {
   const [open, setOpen] = useState(false);
@@ -50,7 +51,7 @@ export function Header() {
             className="h-10 w-10 rounded-full bg-white p-0.5"
             priority
           />
-          <span className="text-lg leading-none">{siteConfig.name}</span>
+          <Logo tone="dark" className="h-6 w-auto sm:h-7" />
         </Link>
 
         <nav aria-label="Hauptnavigation" className="hidden lg:block">
