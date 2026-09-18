@@ -7,11 +7,12 @@ import { CertificateSeal } from "@/components/CertificateSeal";
 import { ContactForm } from "@/components/ContactForm";
 import { coachingModules, totalUe } from "@/lib/content/modules";
 import { siteConfig } from "@/lib/site-config";
+import { BrandTransitionNote } from "@/components/BrandTransitionNote";
 
 export const metadata: Metadata = {
   title: "Für Jobcenter & Agentur für Arbeit",
   description:
-    "AVGS-Coaching nach § 45 SGB III bei KlarVoran (MS Coaching – Mazhar Said): AZAV-zugelassene Maßnahme, Zielgruppe, Ablauf und Ansprechpartner für Vermittlungsfachkräfte bei Jobcenter und Agentur für Arbeit.",
+    "AVGS-Coaching nach § 45 SGB III bei KlarVoran: zugelassene Maßnahme, Zielgruppe, Ablauf, Zulassungsdaten und Ansprechpartner für Vermittlungsfachkräfte.",
   alternates: { canonical: "/fuer-jobcenter" },
 };
 
@@ -26,9 +27,9 @@ export default function FuerJobcenterPage() {
           AZAV-zugelassene Maßnahme für Ihre AVGS-Zuweisung
         </h1>
         <p className="mt-6 max-w-2xl text-lg leading-relaxed text-white/80">
-          KlarVoran ist die Marke von {siteConfig.legalName} – eigenständig nach § 178 SGB III als Bildungsträger
-          zugelassen, mit eigener zertifizierter Maßnahme. Diese Seite gibt Vermittlungsfachkräften einen
-          schnellen, belastbaren Überblick für die Zuweisung.
+          Hier finden Vermittlungsfachkräfte die wesentlichen Angaben zur zugelassenen Maßnahme, zur Zielgruppe,
+          zur Durchführung und zu den vorhandenen Zulassungsnachweisen – kompakt für die Prüfung einer
+          AVGS-Zuweisung.
         </p>
       </Section>
 
@@ -58,9 +59,12 @@ export default function FuerJobcenterPage() {
         <div className="mt-8 grid items-start gap-8 lg:grid-cols-[280px_1fr]">
           <CertificateSeal
             seal="traeger"
-            caption="MS Coaching – Mazhar Said (Zugelassener Träger nach § 178 SGB III)"
+            caption="Trägerzertifikat – ausgestellt auf die bisherige Bezeichnung MS Coaching – Mazhar Said"
           />
-          <CertificateFacts />
+          <div>
+            <CertificateFacts />
+            <BrandTransitionNote className="mt-4" />
+          </div>
         </div>
       </Section>
 
@@ -79,8 +83,8 @@ export default function FuerJobcenterPage() {
           <Card>
             <h3 className="font-semibold text-navy">Maßnahmeziel</h3>
             <p className="mt-2 text-sm leading-relaxed text-navy-600">
-              Aktivierung und nachhaltige Integration in Arbeit oder Ausbildung durch strukturiertes,
-              individuelles Coaching – dokumentiert und messbar statt standardisiert.
+              Aktivierung und nachhaltige Integration in Arbeit oder Ausbildung durch individuelles Coaching:
+              nachvollziehbar dokumentiert und anhand der vereinbarten beruflichen Ziele überprüft.
             </p>
           </Card>
         </div>
@@ -97,7 +101,7 @@ export default function FuerJobcenterPage() {
               {coachingModules.map((m) => (
                 <tr key={m.id} className="border-t border-navy-100 text-navy-600">
                   <td className="px-4 py-3 font-medium text-navy">{m.title}</td>
-                  <td className="px-4 py-3">{m.outcome}</td>
+                  <td className="px-4 py-3">{m.institutionOutcome}</td>
                   <td className="px-4 py-3 text-right font-mono">{m.ue}</td>
                 </tr>
               ))}
@@ -144,14 +148,14 @@ export default function FuerJobcenterPage() {
       <Section tone="navy">
         <div className="mx-auto max-w-2xl text-center">
           <Eyebrow tone="white">Zuweisung oder Rückfrage</Eyebrow>
-          <h2 className="mt-3 text-2xl font-bold sm:text-3xl">Teilnehmer zuweisen oder Rückfrage stellen</h2>
+          <h2 className="mt-3 text-2xl font-bold sm:text-3xl">Teilnehmende zuweisen oder Rückfrage stellen</h2>
           <p className="mt-4 text-white/70">
             Ob Zuweisung, Rückfrage zur Maßnahme oder Prüfung der Passung – schreiben Sie uns direkt. Wir melden
             uns zeitnah zurück.
           </p>
         </div>
         <div className="mx-auto mt-10 max-w-xl rounded-[var(--radius-lg)] bg-white p-6 sm:p-8">
-          <ContactForm />
+          <ContactForm formal />
         </div>
       </Section>
     </>

@@ -6,17 +6,19 @@ const phoneDisplay = process.env.NEXT_PUBLIC_PHONE_DISPLAY ?? "+49 177 9548140";
 const whatsappNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER ?? digitsOnly(phoneDisplay);
 
 export const siteConfig = {
-  // "KlarVoran" ist die öffentliche Marke/Website. Der AZAV-zugelassene Träger
-  // dahinter ist rechtlich weiterhin "MS Coaching – Mazhar Said" (siehe legalName) –
-  // dieser Name bleibt maßgeblich für Impressum, Zertifikat und alle rechtlich/
-  // formal geprüfbaren Angaben (z. B. gegenüber Vermittlungsfachkräften).
+  // KlarVoran ist die öffentliche und künftige Trägerbezeichnung. Bis die
+  // formale Umstellung abgeschlossen ist, bleibt die bisherige Bezeichnung
+  // ausschließlich für rechtliche Angaben und vorhandene Zulassungsnachweise
+  // maßgeblich.
   name: "KlarVoran",
   legalName: "MS Coaching – Mazhar Said",
+  transitionNote:
+    "KlarVoran ist die neue Trägerbezeichnung. Die vorhandenen Zulassungsunterlagen wurden noch unter der bisherigen Bezeichnung „MS Coaching – Mazhar Said“ ausgestellt. Die formale Umstellung auf KlarVoran befindet sich in Bearbeitung.",
   founder: "Mazhar Said",
   claim: "Der schnellste Weg zur Arbeit",
   tagline: "Coaching, Workshops und berufliche Orientierung",
   description:
-    "KlarVoran ist das Coaching- und Workshop-Programm von MS Coaching – Mazhar Said, einem AZAV-zugelassenen Bildungsträger in Frankfurt am Main: AVGS-Bewerbungscoaching nach § 45 SGB III, 1:1-Coaching, Workshops für Gruppen und Kooperationen mit Institutionen.",
+    "KlarVoran bietet in Frankfurt und im Rhein-Main-Gebiet individuelles AVGS-Bewerbungscoaching nach § 45 SGB III, privates Jobcoaching, Workshops und Kooperationen mit Institutionen.",
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.klarvoran.de",
   locale: "de_DE",
 

@@ -35,9 +35,9 @@ export const generalFaq: FaqItem[] = [
       "Ja, unbedingt. Wir erklären dir, wie die Beantragung funktioniert, und du kannst mit uns sprechen, bevor du zu deiner Vermittlungsfachkraft gehst.",
   },
   {
-    question: "Ist KlarVoran ein zugelassener Träger?",
+    question: "Wer ist der zugelassene Träger hinter KlarVoran?",
     answer:
-      "Ja. KlarVoran ist die Marke von MS Coaching – Mazhar Said, seit dem 24.07.2026 nach § 178 SGB III als Träger zugelassen und zertifiziert durch CERTQUA (Zertifikat-Nr. 26-20859-T, gültig bis 23.07.2031). Auch die konkrete Maßnahme ist zugelassen.",
+      "KlarVoran ist die neue Trägerbezeichnung. Das vorhandene CERTQUA-Trägerzertifikat wurde noch unter der bisherigen Bezeichnung „MS Coaching – Mazhar Said“ ausgestellt (Zertifikat-Nr. 26-20859-T, gültig vom 24.07.2026 bis 23.07.2031). Die formale Umstellung auf KlarVoran befindet sich in Bearbeitung. Auch die konkrete Maßnahme ist zugelassen.",
   },
   {
     question: "Was passiert, wenn ich einen Termin nicht wahrnehmen kann?",
@@ -70,7 +70,7 @@ export const avgsFaq: FaqItem[] = [
   {
     question: "Wie läuft die Beantragung ab?",
     answer:
-      "Du sprichst das Thema aktiv bei deinem Beratungstermin an und begründest deinen Bedarf. Ist deine Fachkraft einverstanden, erhältst du einen Gutschein mit Gültigkeitsdauer, Förderziel und Kostenträger. Diesen Gutschein bringst du zu uns – wir übernehmen den Rest der Prüfung.",
+      "Du sprichst das Thema aktiv bei deinem Beratungstermin an und begründest deinen Bedarf. Ist deine Fachkraft einverstanden, erhältst du einen Gutschein mit Gültigkeitsdauer, Förderziel und Kostenträger. Diesen Gutschein bringst du zu uns – wir prüfen Gutschein und Passung zur Maßnahme und klären die nächsten Schritte mit dir.",
   },
   {
     question: "Warum ist das Coaching für mich kostenfrei?",

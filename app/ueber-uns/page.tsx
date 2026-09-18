@@ -9,7 +9,7 @@ import { CoachProfile } from "@/components/CoachProfile";
 export const metadata: Metadata = {
   title: "Über uns",
   description:
-    "KlarVoran: Leitbild, Qualitätsverständnis und Werte des AZAV-zugelassenen Bildungsträgers (MS Coaching – Mazhar Said) für Bewerbungscoaching in Frankfurt am Main.",
+    "KlarVoran verbindet persönliche Begleitung mit klaren Strukturen, damit Menschen berufliche Anforderungen verstehen und selbstständig handeln können.",
   alternates: { canonical: "/ueber-uns" },
 };
 
@@ -18,7 +18,7 @@ const values = [
   { title: "Respekt", text: "Du wirst ernst genommen – unabhängig von deiner Ausgangslage." },
   { title: "Professionalität", text: "Strukturierte Durchführung nach definierten Modulen, vollständig dokumentiert." },
   { title: "Integrationsorientierung", text: "Jeder Schritt zielt auf deine nachhaltige berufliche Perspektive." },
-  { title: "Eigenverantwortung", text: "Coaching als Hilfe zur Selbsthilfe – du gestaltest deinen Weg aktiv mit." },
+  { title: "Eigenverantwortung", text: "Du entwickelst Lösungen, die du selbst anwenden und weiterführen kannst." },
 ];
 
 export default function UeberUnsPage() {
@@ -30,12 +30,12 @@ export default function UeberUnsPage() {
           <div>
             <Eyebrow>Über uns</Eyebrow>
             <h1 className="mt-4 max-w-xl text-3xl font-bold text-navy sm:text-4xl">
-              Strukturiertes Coaching für nachhaltige berufliche Perspektiven
+              Lebenslage verstehen. Berufliche Handlungsfähigkeit aufbauen.
             </h1>
             <p className="mt-6 max-w-xl text-lg leading-relaxed text-navy-600">
-              Unser Ziel ist es, arbeitsuchende Menschen durch strukturiertes, individuelles Coaching nachhaltig in
-              Arbeit, Ausbildung oder berufliche Perspektiven zu integrieren. Wir unterstützen dich dabei, deine
-              Kompetenzen zu erkennen, realistische berufliche Ziele zu definieren und diese systematisch umzusetzen.
+              KlarVoran verbindet aufmerksames Zuhören mit einer klaren, praktischen Vorgehensweise. Wir helfen dir,
+              deine Situation einzuordnen, Anforderungen zu verstehen und konkrete Schritte umzusetzen – bis du
+              mit passenden Werkzeugen selbstständig weitergehen kannst.
             </p>
           </div>
           <ContextGraphic
@@ -49,8 +49,8 @@ export default function UeberUnsPage() {
         <Eyebrow>Gründer &amp; fachliche Leitung</Eyebrow>
         <p className="mt-4 max-w-3xl leading-relaxed text-navy-600">
           KlarVoran arbeitet mit klaren Abläufen und verlässlichen Qualitätsstandards. Gegründet und fachlich
-          geleitet wird der Bildungsträger von Mazhar Said. Bei Bedarf ergänzen qualifizierte Vertretungs- und
-          Kooperationskräfte die Durchführung.
+          geleitet wird KlarVoran von Mazhar Said. Bei konkretem Bedarf können qualifizierte Fachkräfte nach
+          vorheriger Abstimmung und klarer Vereinbarung in die Durchführung einbezogen werden.
         </p>
         <div className="mt-10">
           <CoachProfile />
@@ -65,7 +65,7 @@ export default function UeberUnsPage() {
             "Klare Zielvereinbarungen",
             "Strukturierte Durchführung nach definierten Modulen",
             "Vollständige und nachvollziehbare Dokumentation",
-            "Messbare Zielerreichung",
+            "Überprüfbare Zielschritte",
             "Regelmäßige Überprüfung und Weiterentwicklung unserer Prozesse",
           ].map((item) => (
             <li key={item} className="flex gap-3 rounded-[var(--radius-md)] border border-navy-100 bg-white p-4 text-sm text-navy-600">
@@ -93,7 +93,8 @@ export default function UeberUnsPage() {
           ))}
         </div>
         <p className="mt-8 max-w-2xl text-sm italic leading-relaxed text-navy-600">
-          Wir verstehen Coaching als Hilfe zur Selbsthilfe und fördern nachhaltige Beschäftigungsfähigkeit.
+          Gute Begleitung macht nicht abhängig: Sie schafft Verständnis, stärkt Handlungssicherheit und wird mit
+          jedem selbstständig übernommenen Schritt weniger nötig.
         </p>
       </Section>
 
