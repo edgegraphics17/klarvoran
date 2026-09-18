@@ -6,9 +6,9 @@ import { Card } from "@/components/Card";
 import { CtaSection } from "@/components/CtaSection";
 
 export const metadata: Metadata = {
-  title: "Workshops & Team-Coachings für Gruppen",
+  title: "Workshops für Bewerbung und berufliche Orientierung",
   description:
-    "Workshops und Team-Coachings von KlarVoran (MS Coaching – Mazhar Said) zu Bewerbung, beruflicher Orientierung und digitaler Kompetenz – für Einrichtungen, Schulen und Unternehmen im Rhein-Main-Gebiet.",
+    "Praxisnahe Workshops und Gruppenformate von KlarVoran zu Bewerbung, beruflicher Orientierung und digitaler Kompetenz – für Einrichtungen, Bildungsträger und Unternehmen.",
   alternates: { canonical: "/leistungen/workshops" },
 };
 
@@ -41,7 +41,7 @@ const formats = [
     text: "Vertiefte Bearbeitung mit praktischen Übungen und individuellem Feedback in der Gruppe.",
   },
   {
-    title: "Modulreihe / Team-Coaching",
+    title: "Modulreihe / Gruppenformat",
     text: "Mehrere Termine über einen längeren Zeitraum, z. B. begleitend zu einer Maßnahme oder einem Projekt.",
   },
 ];
@@ -49,18 +49,18 @@ const formats = [
 export default function WorkshopsPage() {
   return (
     <>
-      <Breadcrumbs items={[{ href: "/leistungen", label: "Leistungen" }, { href: "/leistungen/workshops", label: "Workshops & Team-Coachings" }]} />
+      <Breadcrumbs items={[{ href: "/leistungen", label: "Leistungen" }, { href: "/leistungen/workshops", label: "Workshops & Gruppenformate" }]} />
       <Section tone="navy" className="pt-12">
         <div className="grid items-center gap-10 lg:grid-cols-[1.05fr_0.95fr]">
           <div>
-            <Eyebrow tone="white">Workshops & Team-Coachings</Eyebrow>
+            <Eyebrow tone="white">Workshops &amp; Gruppenformate</Eyebrow>
             <h1 className="mt-4 max-w-xl text-3xl font-bold text-white sm:text-4xl">
-              Coaching-Wissen für die ganze Gruppe
+              Praxisnahe Workshops für Bewerbung und berufliche Orientierung
             </h1>
             <p className="mt-6 max-w-xl text-lg leading-relaxed text-white/80">
-              Für Einrichtungen, Schulen, Bildungsträger und Unternehmen: kompakte Workshop- und Team-Coaching-Formate
-              rund um Bewerbung, berufliche Orientierung und digitale Kompetenz – zugeschnitten auf die jeweilige
-              Gruppe statt als Standardvortrag.
+              Für Einrichtungen, Bildungsträger und Unternehmen: kompakte Formate rund um Bewerbung, berufliche
+              Orientierung und digitale Kompetenz – auf Ihre Zielgruppe, Ihre Ziele und den verfügbaren Zeitrahmen
+              abgestimmt.
             </p>
           </div>
           <Image
@@ -121,7 +121,7 @@ export default function WorkshopsPage() {
 
       <CtaSection
         eyebrow="Für Einrichtungen & Unternehmen"
-        title="Workshop für eure Gruppe anfragen"
+        title="Workshop für Ihre Gruppe anfragen"
         description="Schreiben Sie uns Zielgruppe, Thema und gewünschten Zeitraum – wir melden uns mit einem passenden Vorschlag zurück."
         primaryLabel="Workshop anfragen"
         primaryHref="/kontakt"

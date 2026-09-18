@@ -7,12 +7,15 @@ import { getClientIp } from "@/lib/server/request-ip";
 import type { ActionState } from "@/lib/server/action-state";
 
 export async function submitContactForm(_prev: ActionState, formData: FormData): Promise<ActionState> {
+  const formal = formData.get("formality") === "formal";
   const ip = await getClientIp();
   const rate = checkRateLimit(`kontakt:${ip}`, 5, 60_000);
   if (!rate.allowed) {
     return {
       status: "rate-limited",
-      message: `Zu viele Anfragen. Bitte versuche es in ${rate.retryAfterSeconds} Sekunden erneut oder schreib uns direkt per WhatsApp.`,
+      message: formal
+        ? `Zu viele Anfragen. Bitte versuchen Sie es in ${rate.retryAfterSeconds} Sekunden erneut oder schreiben Sie uns direkt per WhatsApp.`
+        : `Zu viele Anfragen. Bitte versuche es in ${rate.retryAfterSeconds} Sekunden erneut oder schreib uns direkt per WhatsApp.`,
     };
   }
 
@@ -25,12 +28,21 @@ export async function submitContactForm(_prev: ActionState, formData: FormData):
       const key = issue.path[0]?.toString();
       if (key && !fieldErrors[key]) fieldErrors[key] = issue.message;
     }
-    return { status: "error", message: "Bitte überprüfe deine Eingaben.", fieldErrors };
+    return {
+      status: "error",
+      message: formal ? "Bitte überprüfen Sie Ihre Eingaben." : "Bitte überprüfe deine Eingaben.",
+      fieldErrors,
+    };
   }
 
   if (parsed.data.website) {
     // Honeypot ausgelöst – stiller Erfolg, kein echter Versand.
-    return { status: "success", message: "Danke für deine Nachricht! Wir melden uns zeitnah bei dir." };
+    return {
+      status: "success",
+      message: formal
+        ? "Vielen Dank für Ihre Nachricht. Wir melden uns zeitnah bei Ihnen."
+        : "Danke für deine Nachricht! Wir melden uns zeitnah bei dir.",
+    };
   }
 
   const result = await sendLead({
@@ -45,7 +57,9 @@ export async function submitContactForm(_prev: ActionState, formData: FormData):
     return {
       status: "dev-success",
       message:
-        "Development-Modus: Kein E-Mail-Dienst konfiguriert. Deine Anfrage wurde in der Server-Konsole protokolliert, nicht wirklich versendet.",
+        formal
+          ? "Development-Modus: Kein E-Mail-Dienst konfiguriert. Ihre Anfrage wurde in der Server-Konsole protokolliert, nicht wirklich versendet."
+          : "Development-Modus: Kein E-Mail-Dienst konfiguriert. Deine Anfrage wurde in der Server-Konsole protokolliert, nicht wirklich versendet.",
     };
   }
 
@@ -53,9 +67,16 @@ export async function submitContactForm(_prev: ActionState, formData: FormData):
     return {
       status: "error",
       message:
-        "Deine Anfrage konnte gerade nicht übermittelt werden. Bitte erreiche uns in der Zwischenzeit direkt per Telefon, E-Mail oder WhatsApp.",
+        formal
+          ? "Ihre Anfrage konnte gerade nicht übermittelt werden. Bitte erreichen Sie uns in der Zwischenzeit direkt per Telefon, E-Mail oder WhatsApp."
+          : "Deine Anfrage konnte gerade nicht übermittelt werden. Bitte erreiche uns in der Zwischenzeit direkt per Telefon, E-Mail oder WhatsApp.",
     };
   }
 
-  return { status: "success", message: "Danke für deine Nachricht! Wir melden uns zeitnah bei dir." };
+  return {
+    status: "success",
+    message: formal
+      ? "Vielen Dank für Ihre Nachricht. Wir melden uns zeitnah bei Ihnen."
+      : "Danke für deine Nachricht! Wir melden uns zeitnah bei dir.",
+  };
 }

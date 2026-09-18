@@ -6,11 +6,12 @@ import { CertificateFacts } from "@/components/CertificateFacts";
 import { CertificateSeal } from "@/components/CertificateSeal";
 import { ContactForm } from "@/components/ContactForm";
 import { siteConfig } from "@/lib/site-config";
+import { BrandTransitionNote } from "@/components/BrandTransitionNote";
 
 export const metadata: Metadata = {
   title: "Für Bildungsträger & Kooperationspartner",
   description:
-    "KlarVoran (MS Coaching – Mazhar Said) als Unterauftragnehmer, Honorardozent oder Jobcoach für Bildungsträger: eigene AZAV-Struktur, BvB-/Maßnahmeerfahrung, kurzfristiger regionaler Einsatz im Rhein-Main-Gebiet.",
+    "KlarVoran übernimmt klar vereinbarte Coaching-Leistungen, Unteraufträge und Dozenteneinsätze für Bildungsträger – nach Verfügbarkeit im Rhein-Main-Gebiet, online oder hybrid.",
   alternates: { canonical: "/fuer-bildungstraeger" },
 };
 
@@ -22,20 +23,20 @@ export default function FuerBildungstraegerPage() {
       <Section tone="navy" className="pt-12">
         <Eyebrow tone="white">Für Bildungsträger & Kooperationspartner</Eyebrow>
         <h1 className="mt-4 max-w-3xl text-3xl font-bold text-white sm:text-4xl">
-          Verlässlicher Jobcoach für Unteraufträge und Kooperationen
+          Verlässliche Coaching-Leistungen für Unteraufträge und Kooperationen
         </h1>
         <p className="mt-6 max-w-2xl text-lg leading-relaxed text-white/80">
-          {siteConfig.legalName} ist selbst nach § 178 SGB III als Träger zugelassen – kein Honorarcoach im
-          Coachpool eines fremden Anbieters, sondern ein Partner mit eigener AZAV-Struktur, der auch als
-          Unterauftragnehmer oder Honorardozent für andere Bildungsträger arbeitet.
+          KlarVoran übernimmt klar definierte Coaching- und Bewerbungsmanagement-Module als Unterauftragnehmer oder
+          Honorardozent. Umfang, Verantwortlichkeiten, Dokumentation und Verfügbarkeit werden vor dem Einsatz
+          verbindlich abgestimmt.
         </p>
       </Section>
 
       <Section tone="tint">
         <div className="grid grid-cols-2 gap-3 sm:grid-cols-4 sm:gap-5">
-          <FactStat value="AZAV" label="Eigene Trägerzulassung" />
+          <FactStat value="AZAV" label="Trägerzulassung vorhanden" />
           <FactStat value="BvB" label="Maßnahmeerfahrung" />
-          <FactStat value="Rhein-Main" label="Kurzfristig regional einsetzbar" />
+          <FactStat value="Rhein-Main" label="Einsatz nach Verfügbarkeit" />
           <FactStat value="1:1" label="Jobcoaching & Bewerbungsmanagement" />
         </div>
       </Section>
@@ -61,8 +62,8 @@ export default function FuerBildungstraegerPage() {
           <Card>
             <h3 className="font-semibold text-navy">Vertretung</h3>
             <p className="mt-2 text-sm leading-relaxed text-navy-600">
-              Kurzfristige Vertretung bei Ausfall eigener Coaches, damit laufende Maßnahmen ohne Unterbrechung
-              weiterlaufen.
+              Zeitlich begrenzte Vertretung nach Verfügbarkeit und vorheriger Abstimmung von Inhalten,
+              Zuständigkeiten und Dokumentation.
             </p>
           </Card>
           <Card>
@@ -94,10 +95,10 @@ export default function FuerBildungstraegerPage() {
             </p>
           </Card>
           <Card>
-            <h3 className="font-semibold text-navy">Kurzfristige regionale Einsetzbarkeit</h3>
+            <h3 className="font-semibold text-navy">Abgestimmte regionale Einsetzbarkeit</h3>
             <p className="mt-2 text-sm leading-relaxed text-navy-600">
               Präsenz in den {siteConfig.presenceLocation.name} ({siteConfig.presenceLocation.region}), online oder
-              hybrid – auch für kurzfristigen Bedarf im Rhein-Main-Gebiet.
+              hybrid – je nach Auftrag, Zeitraum und verfügbarer Kapazität.
             </p>
           </Card>
           <Card>
@@ -116,9 +117,12 @@ export default function FuerBildungstraegerPage() {
           {/* Ausschließlich das Trägerzeichen – kein pauschales Maßnahmesiegel. */}
           <CertificateSeal
             seal="traeger"
-            caption="MS Coaching – Mazhar Said (Zugelassener Träger nach § 178 SGB III)"
+            caption="Trägerzertifikat – ausgestellt auf die bisherige Bezeichnung MS Coaching – Mazhar Said"
           />
-          <CertificateFacts />
+          <div>
+            <CertificateFacts />
+            <BrandTransitionNote className="mt-4" />
+          </div>
         </div>
       </Section>
 
@@ -132,7 +136,7 @@ export default function FuerBildungstraegerPage() {
           </p>
         </div>
         <div className="mx-auto mt-10 max-w-xl rounded-[var(--radius-lg)] bg-white p-6 sm:p-8">
-          <ContactForm />
+          <ContactForm formal />
         </div>
       </Section>
     </>

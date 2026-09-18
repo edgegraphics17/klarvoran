@@ -1,8 +1,8 @@
 import { siteConfig } from "@/lib/site-config";
 
 export function OrganizationStructuredData() {
-  // @graph trennt die Träger-Entität (MS Coaching – Mazhar Said) und die Marke
-  // (KlarVoran) exakt – für Suchmaschinen und KI-Agenten (GEO).
+  // Während der formalen Umstellung bleibt die bisherige rechtliche
+  // Bezeichnung als legalName hinterlegt; die öffentliche Bezeichnung ist KlarVoran.
   const jsonLd = {
     "@context": "https://schema.org",
     "@graph": [
@@ -25,7 +25,7 @@ export function OrganizationStructuredData() {
         founder: {
           "@type": "Person",
           name: siteConfig.founder,
-          jobTitle: "Zertifizierter Coach & Dozent",
+          jobTitle: "Gründer und fachliche Leitung",
         },
         hasCredential: {
           "@type": "EducationalOccupationalCredential",
@@ -41,7 +41,7 @@ export function OrganizationStructuredData() {
     ],
   };
 
-  return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />;
+  return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: serializeJsonLd(jsonLd) }} />;
 }
 
 export function FaqStructuredData({ items }: { items: { question: string; answer: string }[] }) {
@@ -58,7 +58,7 @@ export function FaqStructuredData({ items }: { items: { question: string; answer
     })),
   };
 
-  return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />;
+  return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: serializeJsonLd(jsonLd) }} />;
 }
 
 export function ServiceStructuredData() {
@@ -87,5 +87,9 @@ export function ServiceStructuredData() {
     },
   };
 
-  return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />;
+  return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: serializeJsonLd(jsonLd) }} />;
+}
+
+function serializeJsonLd(value: object) {
+  return JSON.stringify(value).replace(/</g, "\\u003c");
 }

@@ -39,7 +39,7 @@ export default function FuerKommunenPage() {
       <Section tone="navy" className="pt-12">
         <Eyebrow tone="white">Für Kommunen &amp; öffentliche Auftraggeber</Eyebrow>
         <h1 className="mt-4 max-w-3xl text-3xl font-bold text-white sm:text-4xl">
-          Klare Bildungs- und Coachingaufträge. Persönlich und professionell umgesetzt.
+          Klar abgegrenzte Coaching- und Bildungsleistungen für regionale Vorhaben
         </h1>
         <p className="mt-6 max-w-2xl text-lg leading-relaxed text-white/80">
           KlarVoran übernimmt überschaubare, klar abgegrenzte Coaching-, Bildungs- und Workshopaufträge im
@@ -75,8 +75,8 @@ export default function FuerKommunenPage() {
           <Card>
             <h3 className="font-semibold text-navy">Realistisch zugeschnitten</h3>
             <p className="mt-2 text-sm leading-relaxed text-navy-600">
-              KlarVoran bietet klar begrenzte Leistungsbausteine an und stellt sich nicht als Anbieter jeder großen
-              komplexen Gesamtmaßnahme dar.
+              KlarVoran übernimmt Leistungsbausteine, deren Umfang zur vorhandenen Kapazität passt. So bleiben
+              Durchführung, persönliche Verantwortung und vereinbarte Qualität verlässlich steuerbar.
             </p>
           </Card>
         </div>
@@ -92,7 +92,7 @@ export default function FuerKommunenPage() {
           </p>
         </div>
         <div className="mx-auto mt-10 max-w-xl rounded-[var(--radius-lg)] bg-white p-6 sm:p-8">
-          <ContactForm />
+          <ContactForm formal />
         </div>
       </Section>
     </>

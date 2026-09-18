@@ -21,7 +21,7 @@ export const leistungen: Leistung[] = [
     bullets: [
       "32 Einheiten in bis zu 8 Wochen",
       "1:1-Einzelcoaching, keine Gruppe",
-      "AZAV-zugelassen, CERTQUA-zertifiziert",
+      "Zugelassene Maßnahme nach § 45 SGB III",
     ],
     price: "0 € mit bewilligtem AVGS",
     href: "/avgs",
@@ -29,11 +29,11 @@ export const leistungen: Leistung[] = [
   },
   {
     id: "einzelcoaching",
-    eyebrow: "Für alle ohne AVGS-Anspruch",
+    eyebrow: "Für Menschen ohne AVGS",
     title: "1:1-Coaching",
     audience: "Selbstzahler",
     summary:
-      "Dieselbe individuelle Coaching-Methode wie im AVGS-Programm – auch ohne Gutschein, in freiem Umfang und Format.",
+      "Privates Job- und Bewerbungscoaching mit individuell vereinbarten Themen, Umfang und Format – unabhängig von einem Gutschein.",
     bullets: [
       "Umfang und Themen individuell abgestimmt",
       "Online, hybrid oder in Präsenz",
@@ -45,11 +45,11 @@ export const leistungen: Leistung[] = [
   },
   {
     id: "workshops",
-    eyebrow: "Für Gruppen, Klassen & Teams",
-    title: "Workshops & Team-Coachings",
+    eyebrow: "Für Gruppen & Teams",
+    title: "Workshops & Gruppenformate",
     audience: "Institutionen & Unternehmen",
     summary:
-      "Kompakte Formate zu Bewerbung, beruflicher Orientierung und digitaler Kompetenz für Gruppen bei Einrichtungen, Schulen und Unternehmen.",
+      "Kompakte Formate zu Bewerbung, beruflicher Orientierung und digitaler Kompetenz für Einrichtungen, Bildungsträger und Unternehmen.",
     bullets: [
       "Halbtags-, Ganztags- oder Modulformat",
       "Themen individuell nach Bedarf",
@@ -67,7 +67,7 @@ export const leistungen: Leistung[] = [
     summary:
       "Zuweisung, Kooperation oder Unterauftrag: passende Informationen für Vermittlungsfachkräfte, soziale Einrichtungen und Bildungsträger.",
     bullets: [
-      "AZAV-Trägerdaten & Zulassung auf einen Blick",
+      "Zulassungsdaten und Nachweise auf einen Blick",
       "Eigene Seite je Zielgruppe",
       "Direkter Kontakt für Kooperationsanfragen",
     ],

@@ -1,7 +1,7 @@
 import { z } from "zod";
 
-const name = z.string().trim().min(2, "Bitte gib deinen Namen ein.").max(120);
-const email = z.string().trim().email("Bitte gib eine gültige E-Mail-Adresse ein.");
+const name = z.string().trim().min(2, "Bitte Namen eingeben.").max(120);
+const email = z.string().trim().email("Bitte eine gültige E-Mail-Adresse eingeben.");
 const phone = z
   .string()
   .trim()
@@ -20,7 +20,8 @@ export const contactSchema = z.object({
   name,
   email,
   phone,
-  message: z.string().trim().min(10, "Bitte beschreibe dein Anliegen etwas ausführlicher.").max(4000),
+  message: z.string().trim().min(10, "Bitte das Anliegen etwas ausführlicher beschreiben.").max(4000),
+  formality: z.enum(["informal", "formal"]).default("informal"),
   consent,
   website: honeypot,
 });

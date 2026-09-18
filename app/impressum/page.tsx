@@ -20,9 +20,9 @@ export default function ImpressumPage() {
 
         <div className="mt-10 max-w-2xl space-y-8 text-navy-600">
           <p className="text-sm">
-            <strong className="font-semibold text-navy">{siteConfig.name}</strong> ist die Marke, unter der{" "}
-            {siteConfig.legalName} auftritt. Rechtlich verantwortlich im Sinne dieses Impressums ist ausschließlich{" "}
-            {siteConfig.legalName}.
+            <strong className="font-semibold text-navy">{siteConfig.name}</strong> ist die neue Trägerbezeichnung.
+            Die formale Umstellung befindet sich in Bearbeitung. Bis zu ihrem Abschluss ist im Sinne dieses
+            Impressums weiterhin {siteConfig.legalName} rechtlich verantwortlich.
           </p>
 
           <div>
