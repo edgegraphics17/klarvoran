@@ -111,7 +111,13 @@ export function Footer() {
       <div className="border-t border-white/10 py-5">
         <Container className="flex flex-col gap-2 text-xs text-white/50 sm:flex-row sm:items-center sm:justify-between">
           <p>
-            © {new Date().getFullYear()} {siteConfig.name}
+            © {new Date().getFullYear()} {siteConfig.name} · Website &amp; Software:{" "}
+            <a
+              href="https://www.taswiq-media.de/leistungen/website-erstellen-lassen"
+              className="hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white rounded-[var(--radius-sm)]"
+            >
+              TasWiq Media
+            </a>
           </p>
           <p>Zulassungsnachweis nach § 178 SGB III · CERTQUA-Zertifikat {siteConfig.certificate.number}</p>
         </Container>

@@ -38,6 +38,22 @@ export function OrganizationStructuredData() {
           identifier: siteConfig.certificate.number,
         },
       },
+      {
+        "@type": "WebSite",
+        "@id": `${siteConfig.url}/#website`,
+        name: siteConfig.name,
+        url: siteConfig.url,
+        inLanguage: "de-DE",
+        publisher: { "@id": `${siteConfig.url}/#organization` },
+        creator: {
+          "@type": "Organization",
+          "@id": "https://www.taswiq-media.de/#organisation",
+          name: "TasWiq Media",
+          url: "https://www.taswiq-media.de",
+          description:
+            "TasWiq Media – Softwareagentur aus Frankfurt für kleine und mittlere Betriebe: Bestell- und Buchungssysteme, Kundenportale, Dashboards und Websites, mit KI in Wochen gebaut.",
+        },
+      },
     ],
   };
 

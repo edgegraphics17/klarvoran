@@ -28,6 +28,8 @@ export const metadata: Metadata = {
     template: `%s – ${siteConfig.name}`,
   },
   description: siteConfig.description,
+  generator: "TasWiq Media",
+  authors: [{ url: "/humans.txt" }],
   openGraph: {
     type: "website",
     locale: siteConfig.locale,

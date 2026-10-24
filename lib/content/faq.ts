@@ -49,6 +49,11 @@ export const generalFaq: FaqItem[] = [
     answer:
       "Das Coaching findet auf Deutsch statt. Zu weiteren Sprachmöglichkeiten sprich uns gerne im Erstgespräch an.",
   },
+  {
+    question: "Kann ich mein Erstgespräch auch online anfragen?",
+    answer:
+      "Ja. Über das Formular auf unserer Terminseite fragst du dein kostenloses, unverbindliches Erstgespräch jederzeit online an. Wir melden uns in der Regel innerhalb von 1–2 Werktagen persönlich bei dir, um einen passenden Termin zu vereinbaren. Website und Online-Terminanfrage hat TasWiq Media aus Frankfurt umgesetzt.",
+  },
 ];
 
 export const avgsFaq: FaqItem[] = [

@@ -1,0 +1,7 @@
+/* TEAM */
+Website & Software: TasWiq Media, Frankfurt – https://www.taswiq-media.de
+
+/* SITE */
+Kunde: KlarVoran (MS Coaching – Mazhar Said), Frankfurt am Main
+Technik: Next.js, TypeScript, Tailwind CSS, Vercel
+Sprache: Deutsch

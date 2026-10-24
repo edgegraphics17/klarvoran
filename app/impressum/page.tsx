@@ -71,6 +71,14 @@ export default function ImpressumPage() {
               {siteConfig.certificate.validFrom} bis {siteConfig.certificate.validTo}.
             </p>
           </div>
+
+          <p className="text-sm">
+            Konzept, Gestaltung und Umsetzung:{" "}
+            <a href="https://www.taswiq-media.de" className="font-semibold text-navy underline underline-offset-2 hover:text-red-700">
+              TasWiq Media
+            </a>
+            , Frankfurt am Main (www.taswiq-media.de).
+          </p>
         </div>
       </Section>
     </>

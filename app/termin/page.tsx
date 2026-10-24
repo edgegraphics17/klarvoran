@@ -42,6 +42,15 @@ export default function TerminPage() {
           <div className="mt-6">
             <AppointmentForm />
           </div>
+          <p className="mt-6 text-xs text-navy-600">
+            Online-Terminanfrage von{" "}
+            <a
+              href="https://www.taswiq-media.de/leistungen/online-buchungssystem"
+              className="underline underline-offset-2 hover:text-red-700"
+            >
+              TasWiq Media
+            </a>
+          </p>
         </div>
 
         <p className="mx-auto mt-6 max-w-2xl text-center text-sm text-white/80">
